@@ -1,6 +1,6 @@
 /*
- * Globals
- */
+* Globals
+*/
 
 /* Links */
 a,
@@ -21,27 +21,18 @@ a:hover {
 
 
 /*
- * Base structure
- */
-
-html {
-  background: url(usa-resources.gif) no-repeat 50% 50% fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-}
-
+* Base structure
+*/
 
 html,
 body {
   height: 100%;
-
+  background-color: #333;
 }
 body {
-  color: #2F2D2D;
+  color: #fff;
   text-align: center;
-  text-shadow: 0 1px 3px #EBDCBF;
+  text-shadow: 0 1px 3px rgba(0,0,0,.5);
 }
 
 /* Extra markup and styles for table-esque vertical and horizontal centering */
@@ -51,7 +42,7 @@ body {
   height: 100%; /* For at least Firefox */
   min-height: 100%;
   -webkit-box-shadow: inset 0 0 100px rgba(0,0,0,.5);
-          box-shadow: inset 0 0 100px rgba(0,0,0,.5);
+  box-shadow: inset 0 0 100px rgba(0,0,0,.5);
 }
 .site-wrapper-inner {
   display: table-cell;
@@ -69,8 +60,8 @@ body {
 
 
 /*
- * Header
- */
+* Header
+*/
 .masthead-brand {
   margin-top: 10px;
   margin-bottom: 10px;
@@ -115,8 +106,8 @@ body {
 
 
 /*
- * Cover
- */
+* Cover
+*/
 
 .cover {
   padding: 0 20px;
@@ -128,8 +119,8 @@ body {
 
 
 /*
- * Footer
- */
+* Footer
+*/
 
 .mastfoot {
   color: #999; /* IE8 proofing */
@@ -138,8 +129,8 @@ body {
 
 
 /*
- * Affix and center
- */
+* Affix and center
+*/
 
 @media (min-width: 768px) {
   /* Pull out the header and footer */
