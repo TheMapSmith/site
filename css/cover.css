@@ -13,10 +13,9 @@ a:hover {
 .btn-default,
 .btn-default:hover,
 .btn-default:focus {
-  color: #333;
+  color: #EBDCBF
   text-shadow: none; /* Prevent inheritence from `body` */
-  background-color: #fff;
-  border: 1px solid #fff;
+  background-color: #3E8A83;
 }
 
 
@@ -24,15 +23,23 @@ a:hover {
 * Base structure
 */
 
+html {
+  background: url(usa-resources.gif) no-repeat 50% 50% fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
 html,
 body {
   height: 100%;
-  background-color: #333;
+
 }
 body {
-  color: #fff;
+  color: #2F2D2D;
   text-align: center;
-  text-shadow: 0 1px 3px rgba(0,0,0,.5);
+  text-shadow: 0 1px 3px rgba(235,220,191,.5);
 }
 
 /* Extra markup and styles for table-esque vertical and horizontal centering */
@@ -159,5 +166,20 @@ body {
   .mastfoot,
   .cover-container {
     width: 700px;
+  }
+}
+
+h1 {
+  line-height: 2em;
+}
+
+span.glyphicon.glyphicon-map-marker {
+  font-size: 12px;
+  padding: 3px;
+}
+@media (min-width: 768px) {
+  span.glyphicon.glyphicon-map-marker {
+    font-size: 17px;
+    padding: 5px;
   }
 }
