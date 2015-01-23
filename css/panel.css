@@ -51,7 +51,7 @@
   font-size: 1.1em;
 }
 .card .card-action a {
-  color: #3E8A83;
+  color: inherit;
   margin-right: 16px;
   transition: color 0.3s ease;
 }
