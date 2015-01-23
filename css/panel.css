@@ -48,14 +48,51 @@
 .card .card-action {
   border-top: 1px solid rgba(160, 160, 160, 0.2);
   padding: 16px;
+  font-size: 1.1em;
 }
 .card .card-action a {
-  color: #ffab40;
+  color: #3E8A83;
   margin-right: 16px;
   transition: color 0.3s ease;
   text-transform: uppercase;
 }
 .card .card-action a:hover {
-  color: #ffd8a6;
+  color: #3E8A83;
   text-decoration: none;
+}
+
+@font-face {
+  font-family: 'Socialico Plus';
+  src: url('../fonts/Socialico Plus.otf'), url('../fonts/Socialico Plus.ttf') format('truetype')
+}
+
+.socialicoplus {
+  position: relative;
+  top: 3px;
+  display: inline-block;
+  font-family: 'Socialico Plus';
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  font-size: 27px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@font-face {
+  font-family: 'Socialico';
+  src: url('../fonts/Socialico.otf'), url('../fonts/Socialico.ttf') format('truetype')
+}
+
+.socialico {
+  position: relative;
+  top: 3px;
+  display: inline-block;
+  font-family: 'Socialico Plus';
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  font-size: 27px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
