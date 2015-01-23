@@ -25,7 +25,7 @@ a:hover {
  */
 
 html {
-  background: url(images/usa-resources.gif) no-repeat 50% 50% fixed; 
+  background: url(usa-resources.gif) no-repeat 50% 50% fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
