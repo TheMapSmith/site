@@ -236,3 +236,19 @@ footer {
 .avast.text-muted {
   color: #0093AC;
 }
+
+.pirate {
+  background: #F1EEE8;
+}
+
+.pirate.text-muted {
+  color: #A9C7B6;
+}
+
+.business-card {
+  background: rgb(229,217,156);
+}
+
+.business-card.text-muted {
+  color: rgb(160,180,70);
+}
