@@ -119,14 +119,14 @@ fieldset[disabled] .btn-primary.active {
 
 .btn-xl {
     padding: 20px 40px;
-    border-color: #165251;
+    border-color: #333;
     border-radius: 3px;
     text-transform: uppercase;
     font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
     font-size: 18px;
     font-weight: 700;
-    color: #E5D4BB;
-    background-color: #318A87;
+    color: #EEDD5D;
+    background-color: #9DB562;
 }
 
 .btn-xl:hover,
@@ -134,8 +134,8 @@ fieldset[disabled] .btn-primary.active {
 .btn-xl:active,
 .btn-xl.active,
 .open .dropdown-toggle.btn-xl {
-    border-color: #AA9945;
-    color: #318A87;
+    border-color: #333;
+    color: #9DB15F;
     background-color: #EEDD5D;
 }
 
@@ -176,7 +176,7 @@ fieldset[disabled] .btn-xl.active {
 
 .navbar-default .navbar-brand {
     font-family: "Kaushan Script","Helvetica Neue",Helvetica,Arial,cursive;
-    color: #318A87;
+    color: #EEDD5D;
     text-shadow: rgba(0, 0, 0, 0.83) 0px 2px 2px;
 }
 
@@ -184,7 +184,7 @@ fieldset[disabled] .btn-xl.active {
 .navbar-default .navbar-brand:focus,
 .navbar-default .navbar-brand:active,
 .navbar-default .navbar-brand.active {
-    color: #EEDD5D;
+    color: #318A87;
 }
 
 .navbar-default .navbar-collapse {
@@ -210,13 +210,13 @@ fieldset[disabled] .btn-xl.active {
     font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
     font-weight: 400;
     letter-spacing: 1px;
-    color: #318A87;
+    color: #EEDD5D;
 }
 
 .navbar-default .nav li a:hover,
 .navbar-default .nav li a:focus {
     outline: 0;
-    color: #EEDD5D;
+    color: #318A87;
     text-shadow: rgba(0, 0, 0, 0.83) 0px 2px 2px;
 }
 
@@ -265,7 +265,7 @@ fieldset[disabled] .btn-xl.active {
 
 header {
     text-align: center;
-    color: #318A87;
+    color: #EEDD5D;
     background-attachment: scroll;
     background-image: url(../img/usa-resources.gif);
     background-position: center center;
