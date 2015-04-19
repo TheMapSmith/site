@@ -909,14 +909,31 @@ h3 {
 .course-quote-a {
   font-style: italic;
   text-align: center;
-  background: #ddd;
+
+  width: 600px;
+  text-align: right;
+  float: right;
 }
 
 .course-quote-b{
   font-style: italic;
   text-align: center;
-  background: #eee;
+
+  width: 600px;
+  text-align: left;
+  float: left;
 }
+@media(max-width:768px) {
+  .course-quote-a {
+    background: #ddd;
+  }
+
+  .course-quote-b{
+    background: #eee;
+  }
+
+}
+
 
 
 .attribution {
@@ -928,21 +945,9 @@ h3 {
 }
 
 .form-control {
-  height: 36px;
+  height: 72px;
   margin: 18px 0px;
-}
-
-.signup {
-  background-image: url(../img/pattern-signup.png);
-  background-attachment: scroll;
-  background-position: center center;
-  background-repeat: none;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  background-size: cover;
-  -o-background-size: cover;
-  text-shadow: rgba(125,125,125, 0.83) 0px 2px 2px;
-
+  font-size: 24px;
 }
 
 .dbl-spc {
@@ -951,4 +956,28 @@ h3 {
 
 .img-bio {
   max-height: 360px;
+}
+
+.lett-spac {
+  letter-spacing: .5px;
+}
+
+.cta {
+  background: #333;
+  color: #fdfcf9;
+}
+
+.cta form {
+  color: #333;
+  padding: 5%;
+  background-attachment: scroll;
+  background-image: url(../img/cta.jpg);
+  background-position: center center;
+  background-repeat: none;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+  text-shadow: rgba(125,125,125, 0.83) 0px 2px 2px;
+
 }
