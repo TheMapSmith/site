@@ -111,12 +111,11 @@ fieldset[disabled] .btn-primary.active {
     padding: 20px 40px;
     border-color: #333;
     border-radius: 3px;
-    text-transform: uppercase;
-    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
-    font-size: 18px;
-    font-weight: 700;
-    color: #EEDD5D;
-    background-color: #9DB562;
+    font-size: 22px;
+    /*color: #EEDD5D;
+    background-color: #9DB562; */
+    color: #fff;
+    background-color: #BD4E4E;
 }
 
 .btn-xl:hover,
@@ -124,8 +123,8 @@ fieldset[disabled] .btn-primary.active {
 .btn-xl:active,
 .btn-xl.active,
 .open .dropdown-toggle.btn-xl {
-    border-color: #333;
-    color: #9DB15F;
+    border-color: rgb(125,125,125);
+    color: #333;
     background-color: #EEDD5D;
 }
 
@@ -255,7 +254,8 @@ fieldset[disabled] .btn-xl.active {
 
 header {
     text-align: center;
-    color: #EEDD5D;
+    /* old-color: #EEDD5D; */
+    color: #333;
     background-attachment: scroll;
     background-image: url(../img/usa-resources.gif);
     background-position: center center;
@@ -264,25 +264,26 @@ header {
     -moz-background-size: cover;
     background-size: cover;
     -o-background-size: cover;
-    text-shadow: rgba(0, 0, 0, 0.83) 0px 2px 2px;
+    text-shadow: rgba(125,125,125, 0.83) 0px 2px 2px;
 }
 
 header .intro-text {
     padding-top: 100px;
-    padding-bottom: 50px;
+    padding-bottom: 100px;
+    font-size: 18px;
 }
 
 header .intro-text .intro-lead-in {
     margin-bottom: 25px;
     font-family: 'Abril Fatface', cursive;
-    font-size: 22px;
-    line-height: 22px;
+    font-size: 35px;
+    line-height: 45px;
 
 }
 
 header .intro-text .intro-heading {
     margin-bottom: 25px;
-
+    text-transform: uppercase;
     font-family: 'Abril Fatface', cursive;
     font-size: 50px;
     font-weight: 700;
@@ -291,8 +292,9 @@ header .intro-text .intro-heading {
 
 @media(min-width:768px) {
     header .intro-text {
-        padding-top: 300px;
-        padding-bottom: 200px;
+        padding-top: 150px;
+        padding-bottom: 150px;
+        font-size: 25px;
     }
 
     header .intro-text .intro-lead-in {
@@ -862,6 +864,13 @@ body {
 
 h1 {
   font-family: 'Abril Fatface', cursive;
+  font-size: 40px;
+}
+
+h2 {
+  font-family: 'Patua One', cursive;
+  font-size: 20px;
+  margin-bottom: 24px;
 }
 
 .course-head h1 {
@@ -878,4 +887,25 @@ h1 {
 
 .course-head img {
   width: 50%;
+}
+
+.course-quote-a {
+  font-style: italic;
+  text-align: center;
+  background: #ddd;
+}
+
+.course-quote-b{
+  font-style: italic;
+  text-align: center;
+  background: #eee;
+}
+
+
+.attribution {
+  font-weight: 700;
+}
+
+.dim {
+  background: rgba(255,255,255,.5);
 }
