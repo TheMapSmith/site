@@ -944,3 +944,7 @@ h3 {
   text-shadow: rgba(125,125,125, 0.83) 0px 2px 2px;
 
 }
+
+.dbl-spc {
+  line-height: 1.375em;
+}
