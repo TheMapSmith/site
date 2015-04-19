@@ -45,16 +45,6 @@ a.active {
     color: #EEDD5D;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    text-transform: uppercase;
-    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
-    font-weight: 700;
-}
 
 .img-centered {
     margin: 0 auto;
@@ -284,15 +274,16 @@ header .intro-text {
 
 header .intro-text .intro-lead-in {
     margin-bottom: 25px;
-    font-family: "Droid Serif","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: 'Abril Fatface', cursive;
     font-size: 22px;
     line-height: 22px;
+
 }
 
 header .intro-text .intro-heading {
     margin-bottom: 25px;
-    text-transform: uppercase;
-    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+
+    font-family: 'Abril Fatface', cursive;
     font-size: 50px;
     font-weight: 700;
     line-height: 50px;
@@ -306,16 +297,16 @@ header .intro-text .intro-heading {
 
     header .intro-text .intro-lead-in {
         margin-bottom: 25px;
-        font-family: "Droid Serif","Helvetica Neue",Helvetica,Arial,sans-serif;
+        font-family: 'Abril Fatface', cursive;
         font-size: 40px;
-    
         line-height: 40px;
+
     }
 
     header .intro-text .intro-heading {
         margin-bottom: 50px;
-        text-transform: uppercase;
-        font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+
+        font-family: 'Abril Fatface', cursive;
         font-size: 75px;
         font-weight: 700;
         line-height: 75px;
@@ -866,4 +857,25 @@ img::-moz-selection {
 
 body {
     webkit-tap-highlight-color: #EEDD5D;
+}
+
+
+h1 {
+  font-family: 'Abril Fatface', cursive;
+}
+
+.course-head h1 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.course-head p {
+  font-family: 'Merriweather', serif;
+  font-size: 16px;
+  line-height: 1.85;
+  margin-bottom: 35px;
+}
+
+.course-head img {
+  width: 50%;
 }
