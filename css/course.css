@@ -6,7 +6,7 @@
 
 body {
     overflow-x: hidden;
-    font-family: "Roboto Slab","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: 'Merriweather', serif;
 }
 
 .text-muted {
@@ -947,4 +947,8 @@ h3 {
 
 .dbl-spc {
   line-height: 1.775em;
+}
+
+.img-bio {
+  max-height: 360px;
 }
