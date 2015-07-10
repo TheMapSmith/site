@@ -80,6 +80,14 @@ div.container p a {
   color: #2f2d2d;
   text-decoration: underline;
 }
+
+div.container ul li a {
+  color: #2f2d2d;
+  text-decoration: underline;
+  font-size: 18px;
+  line-height: 1.75;
+}
+
 a:hover {
   color: #6c9da5;
 }

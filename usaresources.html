@@ -279,8 +279,8 @@
 
     <section class="grassgreen">
       <div class="container">
-        <h1>Other Data</h1>
-        <h3>The plot thickens.</h3>
+        <h1>Data Mining</h1>
+        <h3>Digging for data.</h3>
         <p>
           Inspired by the other items in the original legend, I started hunting
           for relevant datasets that would fall under the "Natural & Industrial Resources"
@@ -291,7 +291,7 @@
         alt="Great Britain Legend section"
         class="img-responsive img-centered" style="max-height: 200px;" />
         <p style='text-align: center;'>
-          <i>Looking for mining data.</i>
+          <i>Prospecting for mining data.</i>
         </p>
         <p>
           After some searching I came across the United States Geological Survey (USGS)
@@ -300,7 +300,7 @@
           nonmetallic mineral resources throughout the world."
         </p>
         <p>
-          Perfect. I should be able to find things like granite and cement and iron.
+          Perfect. I should be able to find things like granite and cement and iron in there.
         </p>
         <img src="proj/usaresources/usgs-mrds.png" alt="usgs mrds screenshot"
         cass="img-responsive img-centered"/>
@@ -311,7 +311,7 @@
     </section>
       <div class="container">
           <h1>Magnificent Minerals</h1>
-          <h3>Rich vein of data</h3>
+          <h3>A rich vein of data</h3>
           <p>
               With this dataset I found much more than just granite, cement, and iron.
               This was a veritable smorgasbord of resource data. Uranium, smectite, shale,
@@ -321,31 +321,97 @@
               <img src="proj\usaresources\dwarf_fortress_screenshot.png"
               alt="dwarf fortress screenshot" class='img-responsive img-centered'
               style="max-height: 400px;">
-          <p style="text-align: center;"><a href="http://www.dailydot.com/gaming/dwarf-fortress-update-2014/" target="_blank"><i>Image source</i></a></p>    
+          <p style="text-align: center;"><a href="http://www.dailydot.com/gaming/dwarf-fortress-update-2014/" target="_blank"><i>Image source</i></a></p>
+          <p>
+            To keep things simple, I reduced this gigantic dataset down to a few key categories.
+          </p>
+          <img src="proj/usaresources/legend-minerals.png" alt="minerals legend"
+          class="img-responsive img-centered" style="max-height: 400px;" />
+          <p>
+            The map still looked massively cluttered, so I used Esri's
+            <a href="http://desktop.arcgis.com/en/desktop/latest/map/working-with-layers/what-are-representations-.htm" target="_blank">Cartographic Representation</a>
+            system to <a href="http://resources.arcgis.com/en/help/main/10.1/index.html#//00700000002n000000" target="_blank">Disperse Markers</a>
+            to make them more readable.
+          </p>
+          <p>
+            When the points were still too numerous, I used a definition query like this:
+          </p>
+          <p style="text-align: center;"><code>OBJECTID %5 = 0</code></p>
+          <p>
+            The <code>%</code> represents the <a href="https://en.wikipedia.org/wiki/Modulo_operation" target="_blank">modulo</a>
+            arithmetic operation, which returns the remainder after a division operation. In this case,
+            the defition query divides the <code>OBJECTID</code> by 5 and returns the remainder.
+            The result being that only features with <code>OBJECTID's</code> ending in 0 or 5 were displayed,
+            reducing the clutter by 80%.
           </p>
       </div>
-    <section>
-
-    </section>
-
     <section class="red">
-
+      <div class="container" style="color: #F1CE57;">
+        <h1>Artistic License</h1>
+        <h3>"Wait, that's cheating"</h3>
+        <p>
+          "You can't just decide to eliminate data from your map because it's too cluttered!"
+        </p>
+        <h3>Yes I can.</h3>
+        <p>
+          It's art.
+        </p>
+      </div>
     </section>
 
     <section>
-
+      <div class="container">
+        <h1>Other data</h1>
+        <h3>There's a lot.</h3>
+        <p>
+          Instead of boring you with the history of every remaining dataset in the map,
+          here's a comprehensive list:
+          <ul>
+            <li><a href="http://mrdata.usgs.gov/mrds/" target="_blank">USGS MRDS</a></li>
+            <li><a href="http://pubs.usgs.gov/ds/817/" target="_blank">USGS Wind</a></li>
+            <li><a href="http://www.nass.usda.gov/research/Cropland/Release/" target="_blank">USDA NASS</a></li>
+            <li><a href="http://www.nps.gov/gis/data_info/" target="_blank">US NPS</a></li>
+            <li><a href="https://www.st.nmfs.noaa.gov/" target="_blank">NOAA NMFS</a></li>
+            <li><a href="http://www.eia.gov/pub/oil_gas/natural_gas/analysis_publications/maps/maps.htm" target="_blank">EIA</a></li>
+            <li><a href="https://en.openei.org/datasets/dataset" target="_blank">OpenEI</a></li>
+            <li><a href="https://en.wikipedia.org/wiki/List_of_shipbuilders_and_shipyards#United_States" target="_blank">Wikipedia</a></li>
+            <li><a href="https://www.mapbox.com/maki/" target="_blank">Mapbox Maki</a></li>
+            <li><a href="http://www.naturalearthdata.com/" target="_blank">NaturalEarth</a></li>
+          </ul>
+        </p>
+        <h3>Software Used</h3>
+        <p>
+          <ul>
+            <li>Esri ArcGIS 10.2.1</li>
+            <li>Inkscape</li>
+          </ul>
+        </p>
+      </div>
     </section>
 
-    <section class="olive">
-
+    <section class="lightblue" id="download">
+      <div class="container">
+        <h1>The map</h1>
+        <p>
+          I'm happy to share this <strong>5K</strong> high definition version with
+          you completely hassle free!
+        </p>
+        <a href="proj/usaresources/The United States - Her Natural and Industrial Resources - 5K.jpg" target="_blank">
+        <img src="proj/usaresources/The United States - Her Natural and Industrial Resources - 730.jpg" alt="usa resources thumb 730px" /></a>
+        <p style="text-align: center;">
+          <i><a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">Creative Commons Attribution-NonCommercial 4.0 International License</a>.</i>
+        </p>
+      </div>
     </section>
-
-    <section>
-
-    </section>
-
-    <section class="waterblue" id="download">
-
+    <section class="yellow">
+      <div class="container">
+        <h1>However!</h1>
+        <p>
+          For a fair price I'd be willing to share the <strong>full-resolution PDF,</strong>
+          suitable for large format printing for personal use.
+        </p>
+        <h3><a href="https://gum.co/usaresources">Check it out here</a></h3>
+      </div>
     </section>
 
     <!--<script>
