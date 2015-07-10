@@ -96,7 +96,7 @@ section {
   padding: 15px;
 }
 
-p {
+p, ol, ul {
   font-size: 18px;
   line-height: 1.75;
   padding-bottom: 10px;
