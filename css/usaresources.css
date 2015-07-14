@@ -143,3 +143,17 @@ p, ol, ul {
   border-radius: 2px;
   overflow: hidden;
 }
+
+.shadow {
+  border: 1.5px rgb(196, 127, 24) solid;
+  -webkit-box-shadow: 1px 1px 5px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: 1px 1px 5px 0px rgba(0,0,0,0.75);
+  box-shadow: 1px 1px 5px 0px rgba(0,0,0,0.75);
+}
+
+a.prints {
+  color: black;
+}
+a.prints:hover {
+  color: #6c9da5;
+}
