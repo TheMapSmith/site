@@ -152,7 +152,7 @@ p, ol, ul {
 }
 
 .shadow {
-  border: 1.5px rgb(196, 127, 24) solid;
+  border: 1.5px #333333 solid;
   -webkit-box-shadow: 1px 1px 5px 0px rgba(0,0,0,0.75);
   -moz-box-shadow: 1px 1px 5px 0px rgba(0,0,0,0.75);
   box-shadow: 1px 1px 5px 0px rgba(0,0,0,0.75);
@@ -163,4 +163,50 @@ a.prints {
 }
 a.prints:hover {
   color: #6c9da5;
+}
+
+.devgoogle {
+  background-color: #dddddd;
+  max-width: 85%;
+  margin: 0 auto;
+}
+
+.dg {
+  -webkit-user-select: none;
+  background-color: rgb(77, 144, 254);
+  background-image: -webkit-linear-gradient(top, rgb(77, 144, 254), rgb(71, 135, 237));
+  border-bottom-color: rgb(48, 121, 237);
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 2px;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  border-left-color: rgb(48, 121, 237);
+  border-left-style: solid;
+  border-left-width: 1px;
+  border-right-color: rgb(48, 121, 237);
+  border-right-style: solid;
+  border-right-width: 1px;
+  border-top-color: rgb(48, 121, 237);
+  border-top-left-radius: 0px;
+  border-top-right-radius: 2px;
+  border-top-style: solid;
+  border-top-width: 1px;
+  color: rgb(255, 255, 255);
+  display: inline-block;
+  font-family: arial, sans-serif;
+  font-size: 11px;
+  font-weight: bold;
+  height: 29px;
+  line-height: 27px;
+  margin-bottom: 11px;
+  margin-left: 8px;
+  margin-right: 8px;
+  margin-top: 11px;
+  min-width: 54px;
+  padding-bottom: 0px;
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-top: 0px;
+  text-align: center;
+
 }
