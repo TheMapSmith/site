@@ -29,57 +29,38 @@ header {
   color: #48c090;
 }
 
-.lightblue {
-  background-color: #3E8a83;
-}
-
-.yellow {
-  background-color: #F1CE57;
-}
-
-.olive {
-  background-color: #483e2b;
-}
-
-.waterblue {
-  background-color: #6c9da5;
-}
-
-.grassgreen {
-  background-color: #b4bf71;
-}
-
-.red {
-  background-color: #d53420;
-}
-
-.dkgrey {
-  background-color: #2F2D2D;
+.water {
+  background-color: #48c090;
 }
 
 .tan {
-  background-color: #ebdcbf;
+  background-color: #f0d890;
 }
 
-.bluegreen {
-  background-color: #27504f;
+.HI {
+  background-color: #b46a1d;
 }
 
-.fallow {
-  background-color: #aa9944;
+.AK {
+  background-color: #ffaaae;
 }
 
-.fruit {
-  background-color: #e0511e;
+.red {
+  background-color: #ec2412;
 }
 
-.brown {
-  background-color: #483e2b
+.purple {
+  background-color: #bd95af;
 }
 
-.lightgrey {
-  background-color: #666666;
+.orange {
+  background-color: #ec6515;
 }
+
+.green {
+  background-color: #74ac31;
+}
+
 .colors {
   height: 100px;
   border: 2px black solid;
