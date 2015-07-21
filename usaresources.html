@@ -55,7 +55,7 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
                     <li class="hidden">
-                        <a href="#page-top"></a>
+                        ref="#page-top"></a>
                     </li>
                     <li>
                         <a class="page-scroll" href="index.html" style="text-decoration: none; line-height: 1;">Portfolio</a>
@@ -74,7 +74,7 @@
             <div class="intro-text">
                 <div class="intro-heading">The United States</div>
                 <div class="intro-lead-in">Her Natural and Industrial Resources</div>
-                <a href="#download" class="page-scroll btn btn-xl">Get The Map</a>
+                <a href="#download" class="page-scroll btn btn-xl" id="getthemap">Get The Map</a>
             </div>
         </div>
       </div>
@@ -95,10 +95,10 @@
       <div class="container">
         <h1>The Inspiration</h1>
         <p>
-          This map came about when I read Marty's post on <a href="http://maphugger.com/" target="_blank">MapHugger</a>
+          This map came about when I read Marty's post on <a href="http://maphugger.com/" target="_blank" id="maphugger">MapHugger</a>
           entitled
           <a href="http://maphugger.com/post/24863298345/the-cartographic-aesthetic"
-          target="_blank">
+          target="_blank" id="cartoaesthetic">
             <i>"The Cartographic Aesthetic."</i>
           </a>
           He posited that maps intentionally retain
@@ -111,7 +111,7 @@
         </p>
         <p style="text-align: center;">
           <a href="https://www.flickr.com/photos/boston_public_library/3531527882/sizes/o/in/photostream/"
-          target="_blank">
+          target="_blank" id="GBres">
           <img class="img-responsive img-centered"
             src="proj/usaresources/great_britain_resources.jpg"
             alt="Great Britain Her Natural and Industrial Resources"
@@ -132,7 +132,7 @@
         <h3>The palette was amazing</h3>
         <p>
           Using
-          <a href="http://color.adobe.com" target="_blank">Adobe Color</a> I extracted
+          <a href="http://color.adobe.com" target="_blank" id="adobecolor">Adobe Color</a> I extracted
           the key colors from the map.
         </p>
           <div class="row">
@@ -227,7 +227,7 @@
           <strong>Here's how I processed the land use raster into flowy vectors:</strong>
           <ol>
             <li>
-              <a href="http://resources.arcgis.com/en/help/main/10.1/index.html#/Reclassify/009z000000sr000000/" target="_blank" class="prints">
+              <a href="http://resources.arcgis.com/en/help/main/10.1/index.html#/Reclassify/009z000000sr000000/" target="_blank" class="prints" id="reclassify">
                 Reclassify
               </a>
             </li>
@@ -235,7 +235,7 @@
               <li>Reduce and simplify the categories</li>
             </ul>
             <li>
-              <a href="http://resources.arcgis.com/en/help/main/10.1/index.html#//00170000009t000000" target="_blank" class="prints">
+              <a href="http://resources.arcgis.com/en/help/main/10.1/index.html#//00170000009t000000" target="_blank" class="prints" id="resample">
                 Resample
               </a>
             </li>
@@ -243,17 +243,17 @@
               <li>30m &rarr; 15km by majority rule</li>
             </ul>
             <li>
-              <a href="http://resources.arcgis.com/en/help/main/10.1/index.html#//001200000008000000" target="_blank"class="prints">
+              <a href="http://resources.arcgis.com/en/help/main/10.1/index.html#//001200000008000000" target="_blank"class="prints" id="rastpoly">
                 Raster to Polygon
               </a>
             </li>
             <li>
-              <a href="http://resources.arcgis.com/en/help/main/10.1/index.html#//007000000013000000" target="_blank" class="prints">
+              <a href="http://resources.arcgis.com/en/help/main/10.1/index.html#//007000000013000000" target="_blank" class="prints" id="smoothpoly">
                 Smooth Polygon
               </a>
             </li>
             <li>
-              <a href="http://resources.arcgis.com/en/help/main/10.1/index.html#/Creating_a_map_topology/01mm0000000r000000/" target="_blank" class="prints">
+              <a href="http://resources.arcgis.com/en/help/main/10.1/index.html#/Creating_a_map_topology/01mm0000000r000000/" target="_blank" class="prints" id="topology">
                 Manually stitch together
               </a>
             </li>
@@ -283,7 +283,7 @@
         <h1>Reference Data</h1>
         <h3>This was the easy part</h3>
         <p>
-          Thanks to <a href="http://www.naturalearthdata.com/" target="_blank">NaturalEarth Data</a>,
+          Thanks to <a href="http://www.naturalearthdata.com/" target="_blank" id="NEdata">NaturalEarth Data</a>,
           basic background information is <em>extremely</em> easy to come up with.
           I highly recommend using their data for all your small-scale mapping needs.
         </p>
@@ -319,7 +319,7 @@
         </p>
         <p>
           After some searching I came across the United States Geological Survey (USGS)
-          <a href="http://mrdata.usgs.gov/mrds/" target="_blank">Mineral Resources Data System (MRDS),</a>
+          <a href="http://mrdata.usgs.gov/mrds/" target="_blank" id="mrds">Mineral Resources Data System (MRDS),</a>
           which is a "collection of reports describing metallic and
           nonmetallic mineral resources throughout the world."
         </p>
@@ -353,8 +353,8 @@
           class="img-responsive img-centered" style="max-height: 400px;" />
           <p>
             The map still looked massively cluttered, so I used Esri's
-            <a href="http://desktop.arcgis.com/en/desktop/latest/map/working-with-layers/what-are-representations-.htm" target="_blank">Cartographic Representation</a>
-            system to <a href="http://resources.arcgis.com/en/help/main/10.1/index.html#//00700000002n000000" target="_blank">Disperse Markers</a>
+            <a href="http://desktop.arcgis.com/en/desktop/latest/map/working-with-layers/what-are-representations-.htm" target="_blank" id="cartorep">Cartographic Representation</a>
+            system to <a href="http://resources.arcgis.com/en/help/main/10.1/index.html#//00700000002n000000" target="_blank" id="disperse">Disperse Markers</a>
             to make them more readable.
           </p>
           <p>
@@ -362,7 +362,7 @@
           </p>
           <p style="text-align: center;"><code>OBJECTID %5 = 0</code></p>
           <p>
-            The <code>%</code> represents the <a href="https://en.wikipedia.org/wiki/Modulo_operation" target="_blank">modulo</a>
+            The <code>%</code> represents the <a href="https://en.wikipedia.org/wiki/Modulo_operation" target="_blank" id="modulo">modulo</a>
             arithmetic operation, which returns the remainder after a division operation. In this case,
             the defition query divides the <code>OBJECTID</code> by 5 and returns the remainder.
             The result being that only features with <code>OBJECTID's</code> ending in 0 or 5 were displayed,
@@ -392,26 +392,26 @@
           Instead of boring you with the history of every remaining dataset in the map,
           here's a comprehensive list:
           <ul>
-            <li><a href="http://mrdata.usgs.gov/mrds/" target="_blank">USGS MRDS</a></li>
-            <li><a href="http://pubs.usgs.gov/ds/817/" target="_blank">USGS Wind</a></li>
-            <li><a href="http://www.nass.usda.gov/research/Cropland/Release/" target="_blank">USDA NASS</a></li>
-            <li><a href="http://www.nps.gov/gis/data_info/" target="_blank">US NPS</a></li>
-            <li><a href="https://www.st.nmfs.noaa.gov/" target="_blank">NOAA NMFS</a></li>
-            <li><a href="http://www.eia.gov/pub/oil_gas/natural_gas/analysis_publications/maps/maps.htm" target="_blank">EIA</a></li>
-            <li><a href="https://en.openei.org/datasets/dataset" target="_blank">OpenEI</a></li>
-            <li><a href="https://en.wikipedia.org/wiki/List_of_shipbuilders_and_shipyards#United_States" target="_blank">Wikipedia</a></li>
-            <li><a href="http://www.naturalearthdata.com/" target="_blank">NaturalEarth</a></li>
+            <li><a href="http://mrdata.usgs.gov/mrds/" target="_blank" id="src">USGS MRDS</a></li>
+            <li><a href="http://pubs.usgs.gov/ds/817/" target="_blank" id="src">USGS Wind</a></li>
+            <li><a href="http://www.nass.usda.gov/research/Cropland/Release/" target="_blank" id="src">USDA NASS</a></li>
+            <li><a href="http://www.nps.gov/gis/data_info/" target="_blank" id="src">US NPS</a></li>
+            <li><a href="https://www.st.nmfs.noaa.gov/" target="_blank" id="src">NOAA NMFS</a></li>
+            <li><a href="http://www.eia.gov/pub/oil_gas/natural_gas/analysis_publications/maps/maps.htm" target="_blank" id="src">EIA</a></li>
+            <li><a href="https://en.openei.org/datasets/dataset" target="_blank" id="src">OpenEI</a></li>
+            <li><a href="https://en.wikipedia.org/wiki/List_of_shipbuilders_and_shipyards#United_States" target="_blank" id="src">Wikipedia</a></li>
+            <li><a href="http://www.naturalearthdata.com/" target="_blank" id="src">NaturalEarth</a></li>
           </ul>
         </p>
         <p>
           <h3>Styles:</h3>
           <ul>
-            <li>Typeface: <a href="https://typekit.com/fonts/futura-pt" target="_blank">Futura</a></li>
+            <li>Typeface: <a href="https://typekit.com/fonts/futura-pt" target="_blank" id="futura">Futura</a></li>
             <li>Symbols:</li>
             <ul>
               <li>Esri Symbol Fonts</li>
-              <li><a href="https://www.mapbox.com/maki/" target="_blank">Mapbox Maki</a></li>
-              <li><a href="http://www.thenounproject.com" target="_blank">The Noun Project</a></li>
+              <li><a href="https://www.mapbox.com/maki/" target="_blank" id="maki">Mapbox Maki</a></li>
+              <li><a href="http://www.thenounproject.com" target="_blank" id="noun">The Noun Project</a></li>
               <li>Custom Icons</li>
             </ul>
           </ul>
@@ -436,37 +436,37 @@
 
         <div class="row">
             <div class="col-md-4 col-sm-6 col-xs-6 center">
-                <a href="http://www.esri.com/mapmuseum" title="Esri Mapbook Volume 30" class="prints" target="_blank">
+                <a href="http://www.esri.com/mapmuseum" title="Esri Mapbook Volume 30" class="prints" target="_blank" id="mapbook">
                     <img src="img/logos/Esri.gif" class="img-responsive img-centered" alt="">
                     <small><i>MapBook Vol. 30 (2015)</i></small>
                 </a>
             </div>
             <div class="col-md-4 col-sm-6 col-xs-6 center">
-                <a href="http://www.wired.com/2014/12/favorite-maps-year/" class="prints" target="_blank">
+                <a href="http://www.wired.com/2014/12/favorite-maps-year/" class="prints" target="_blank" id="wired">
                     <img src="img/logos/wired.gif" class="img-responsive img-centered" alt="">
                     <small><i>Favorite Maps (2014)</i></small>
                 </a>
             </div>
             <div class="col-md-4 col-sm-6 col-xs-6 center">
-                <a href="http://mapdesign.icaci.org/2014/07/mapcarte-208365-the-united-states-her-natural-industrial-resources-by-stephen-smith-2014/" class="prints" target="_blank">
+                <a href="http://mapdesign.icaci.org/2014/07/mapcarte-208365-the-united-states-her-natural-industrial-resources-by-stephen-smith-2014/" class="prints" target="_blank" id="mapcarte">
                     <img src="img/logos/icaci.gif" class="img-responsive img-centered" alt="">
                     <small><i>MapCarte 208/365 (2014)</i></small>
                 </a>
             </div>
             <div class="col-md-4 col-sm-6 col-xs-6 center">
-                <a href="http://cartonerd.blogspot.com/2014/12/favourite-maps-from-2014.html" class="prints" target="_blank">
+                <a href="http://cartonerd.blogspot.com/2014/12/favourite-maps-from-2014.html" class="prints" target="_blank" id="cartonerd">
                     <img src="img/logos/cartonerd.gif" class="img-responsive img-centered" alt="">
                     <small><i>Favourite Maps (2014)</i></small>
                 </a>
             </div>
             <div class="col-md-4 col-sm-6 col-xs-6 center">
-                <a href="http://geohipster.com/2014/11/05/2015-geohipster-calendar-available-purchase/"  class="prints" target="_blank">
+                <a href="http://geohipster.com/2014/11/05/2015-geohipster-calendar-available-purchase/"  class="prints" target="_blank" id="geohipster">
                     <img src="img/logos/geohipster.gif" class="img-responsive img-centered" alt="">
                     <small><i>GeoHipster Calendar (2015)</i></small>
                 </a>
             </div>
             <div class="col-md-4 col-sm-6 col-xs-6 center">
-                <a href="http://www.esri.com/mapmuseum" title="Esri Mapbook Volume 30" class="prints" target="_blank">
+                <a href="http://www.esri.com/mapmuseum" title="Esri maps we love" class="prints" target="_blank" id="mapswelove">
                     <img src="img/logos/Esri.gif" class="img-responsive img-centered" alt="">
                     <small><i>Maps We Love (2015)</i></small>
                 </a>
@@ -512,14 +512,14 @@
         <div class="container">
           <div class="row">
             <div class="col-sm-6">
-              <a href="https://gum.co/usarespost" class='prints'>
+              <a href="https://gum.co/usarespost" class='prints' id="buy">
                 <p class="center">Poster <br><small><i>From $47</i></small></p>
                 <img src="proj/usaresources/usaresources_poster.png"
                 alt="poster mockup" class="img-responsive shadow" />
               </a>
             </div>
             <div class="col-sm-6">
-              <a href="https://gum.co/usaresfram" class='prints'>
+              <a href="https://gum.co/usaresfram" class='prints' id="buy">
                 <p class="center">Framed Poster <br><small><i>From $79</i></small></p>
                 <img src="proj/usaresources/usaresources_poster_framed.png"
                 alt="framed poster mockup" class='img-responsive shadow' />
@@ -530,7 +530,7 @@
           <div class="row">
             <div class="col-sm-3"></div>
             <div class="col-sm-6">
-              <a href="https://gum.co/usarescan" class='prints'>
+              <a href="https://gum.co/usarescan" class='prints' id="buy">
                 <p class="center">Gallery Canvas <br><small><i>From $80</i></small></p>
                 <img src="proj/usaresources/usaresources_canvas_mockup.png"
                 alt="canvas mockup" class="img-responsive shadow" />
@@ -554,7 +554,7 @@
         <p>
           That's ok, we're still friends. Enjoy your wallpaper!
         </p>
-        <a href="proj/usaresources/The United States - Her Natural and Industrial Resources - 5K.jpg" target="_blank">
+        <a href="proj/usaresources/The United States - Her Natural and Industrial Resources - 5K.jpg" target="_blank" id="DL">
         <img src="proj/usaresources/The United States - Her Natural and Industrial Resources - 730.jpg" alt="usa resources thumb 730px" class="img-responsive img-center" /></a>
 
         <p style="text-align: center;">
@@ -570,6 +570,7 @@
       })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
       ga('create', 'UA-45708379-5', 'auto');
+      ga('require', 'linkid', 'linkid.js');
       ga('send', 'pageview');
 
     </script>

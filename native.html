@@ -102,7 +102,7 @@
           I created this as a gift for my map-loving cousin who is a lawyer for the
           United States Bureau of Indian Affairs. I found out from his wife that
           he really liked the
-          <a href="https://www.census.gov/geo/maps-data/maps/aian_wall_maps.html" target="_blank">
+          <a href="https://www.census.gov/geo/maps-data/maps/aian_wall_maps.html" target="_blank" id="aianmap">
             official maps</a> put out by the US Census, but wanted "something retro"
             with the same vein.
           <img src="proj/native/AIAN_US_2010.jpg" alt="us census map"
@@ -120,11 +120,11 @@
         <h2>US Census to the rescue</h2>
         <p>
           Thanks to the super useful Census TIGER program, the
-          <a href="https://www.census.gov/geo/maps-data/data/cbf/cbf_aiannh.html" target="_blank">American Indian and Alaskan Native (AIAN) shapefile</a>
+          <a href="https://www.census.gov/geo/maps-data/data/cbf/cbf_aiannh.html" target="_blank" id="aianDL">American Indian and Alaskan Native (AIAN) shapefile</a>
           was easy to download.
         </p>
         <aside class="devgoogle shadow">
-          <a href="https://www.google.com/#q=us+census+aian+shapefile" target="_blank">
+          <a href="https://www.google.com/#q=us+census+aian+shapefile" target="_blank" id="#DG">
           <button type="button" name="button" class="dg">#devgoogle</button></a>
           <code>us census aian shapefile</code>
         </aside>
@@ -242,6 +242,7 @@
       })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
       ga('create', 'UA-45708379-5', 'auto');
+      ga('require', 'linkid', 'linkid.js');
       ga('send', 'pageview');
 
     </script>
