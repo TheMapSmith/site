@@ -231,7 +231,7 @@
       </div>
     </section>
 
-    <section class="HI">
+    <section class="orange" style="color: #333">
       <div class="container">
         <h1>The Design</h1>
         <h2>Build from the ground up</h2>
@@ -265,17 +265,60 @@
           Using that style was easy enough, but I wanted there to be some variation between
           state borders. For that, I turned to the <a href="https://en.wikipedia.org/wiki/Four_color_theorem"
           target="_blank" id="4color">Four Color Theorem.</a>
+        </p>
           <img src="https://upload.wikimedia.org/wikipedia/commons/4/4a/World_map_with_four_colours.svg"
           alt="four color theorem world map" class='img-responsive img-centered shadow'/>
-          <i class="center">Source: Wikipedia</i>
+        <p class="center">
+          <i>Source: Wikipedia</i>
         </p>
         <p>
-          <strong>Blending Modes</strong>
+          Thanks to the <a href="https://plugins.qgis.org" target="_blank" id="qgisplugins">
+            exhaustive plugins library</a>, it's easy to extent QGIS' functionality.
+            For help automatically processing the four-color theorem I turned to <thead>
+              <a href="https://github.com/nyalldawson/topocolour" target="_blank" id="topocolour">
+              topocolour plugin.</a> Strangely, QGIS threw a script error,
+              but it worked nonetheless! Now I had one of 5 unique color values for
+              each state border.
+        </p>
+        <p><strong>Blending Modes</strong></p>
+        <p>
+          For the borders I wanted colors that were complimentary to the existing
+          color scheme, but I knew that the bold colors I chose above would look
+          best as the reservations areas. To save myself the trouble of coming up
+          with five more colors in the same theme, I used another one of QGIS'
+          awesome tools - blending modes.
         </p>
         <p>
-          Soft Light.
+          Blending modes is a special rendering type where pixels in one layer are
+          mixed together through the settings <a href="https://docs.qgis.org/2.8/en/docs/user_manual/working_with_vector/vector_properties.html#layer-rendering"
+          target="_blank" id="blending">described here.</a>
         </p>
-
+        <p>
+          <img src="proj/native/blending.gif" alt="blending modes gif" class="img-responsive img-centered shadow" />
+        </p>
+        <p>
+          I used the blending mode <strong>Soft Light</strong>, which combines the
+          <em>Burn</em> - causing the underlying pixels to darken, and <em>Dodge</em>
+          - brightening and saturating the underlying pixels. The great part of this
+          in the end is that for the state outlines I pick a set of typical colors...
+        </p>
+        <div class="row">
+          <div class="col-xs-2 colors" style="background-color:red;"></div>
+          <div class="col-xs-2 colors" style="background-color:green;"></div>
+          <div class="col-xs-2 colors" style="background-color:blue;"></div>
+          <div class="col-xs-2 colors" style="background-color:purple;"></div>
+          <div class="col-xs-2 colors" style="background-color:orange;"></div>
+        </div>
+        <p>
+          ...and end up with a beautiful, subtle, retro color scheme.
+        </p>
+        <p>
+          <img src="proj/native/soft-light.png" alt="soft light" class="img-responsive img-centered shadow" />
+        </p>
+        <h3>The Fonts</h3>
+        <p>
+          
+        </p>
       </div>
     </section>
 
