@@ -47,6 +47,9 @@ header {
 
 .red {
   background-color: #ec2412;
+  color: #f0d890;
+  /*text-shadow: #754512 1px 1px;*/
+  text-shadow: rgba(0, 0, 0, 0.83) 0px 2px 2px;
 }
 
 .purple {
