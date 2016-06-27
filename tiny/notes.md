@@ -1,0 +1,6 @@
+- show tiny maps
+- discuss process
+- Link to other work
+- Mention freelancing
+- link to writeups
+- social media

@@ -1,10 +1,261 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>Test</title>
-  </head>
-  <body>
-    Hello
-  </body>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tiny Maps - by Mapsmith</title>
+
+  <link href="https://fonts.googleapis.com/css?family=BioRhyme|Lato:300,700" rel="stylesheet">
+
+  <style type="text/css">
+    body {
+      font-family: 'Lato', sans-serif;
+      /*margin: 40px 40px 0px 40px;*/
+      margin: 0;
+      line-height: 1.6;
+      font-size: 18px;
+      color: #333;
+      /*padding: 0 10px;*/
+    }
+
+    a {
+      color: #47B8E0;
+      text-decoration: none;
+    }
+
+    h1,
+    h2,
+    h3 {
+      font-family: 'BioRhyme', serif;
+      color: #44444E;
+      line-height: 1.2;
+    }
+
+    aside {
+      color: #44444e;
+      font-style: italic;
+      font-size: .8em;
+      text-align: center;
+      padding: 15px;
+      background-color: #efefef;
+      border-radius: 5px;
+      box-shadow: 1px 1px 10px #ccc;
+      margin: 35px 0px;
+    }
+
+    .cta {
+      color: #5d4f2d;
+      background-color: #ffd885;
+      font-style: normal;
+      /*text-shadow: 1px 1px 5px rgba(40,40,40,.6);*/
+      margin-bottom: 50px;
+      margin-top: 50px;
+    }
+
+    .cta-header {
+      font-size: 1.4em;
+    }
+
+    .cta p strong {
+      color: #523c0b;
+      font-size: 1.2em;
+    }
+
+    strong {
+      font-weight: 700;
+      color: #222;
+    }
+
+    footer {
+      background-color: #fed;
+    }
+
+    .container {
+      max-width: 650px;
+      margin: 40px auto;
+    }
+
+    .toprow {
+      width: 100%;
+      height: auto;
+      text-align: center;
+    }
+
+    .tiny {
+      width: 84px;
+      /*display: block;
+      margin: 0 auto;*/
+    }
+
+    .maki {
+      text-align: center;
+    }
+
+    .uk { text-align: center;}
+    .uk img {
+      max-width: 50%;
+      box-shadow: 5px 5px 10px rgba(50,50,50,0.5);
+    }
+
+    .poster {
+      max-width: 100%;
+      text-align: center;
+    }
+    .poster img {
+      width: 100%;
+    }
+
+    .icons {
+      text-align: center;
+    }
+
+    .icons img {
+      width: 50px;
+      padding: 25px;
+    }
+
+    .attribution {
+      margin-bottom: 0;
+      color: #e0d0c0;
+      font-size: .8em;
+    }
+  </style>
+
+  <script type="text/javascript" src="http://localhost:35729/livereload.js"></script>
+
+</head>
+
+<body>
+  <div class="container">
+  <header>
+    <h1>Tiny Maps</h1>
+    <h3>A cartographic experiment</h3>
+    <p>
+      By <a href="http://www.mapsmith.net" target="_blank">TheMapsmith</a>
+    </p>
+  </header>
+
+  <div class="toprow">
+    <img class="tiny" src="UK.png" alt="" />
+    <img class="tiny" src="SF 12z.png" alt="" />
+    <img class="tiny" src="Great Lakes.png" alt="" />
+    <img class="tiny" src="DC 12z.png" alt="" />
+    <img class="tiny" src="ATL 13.88z.png" alt="" />
+  </div>
+
+  <aside class="cta">
+    <div class="cta-header">
+      <p>
+        Hey! Thanks for visiting my map gallery page.
+      </p>
+      <p>
+        Since you're here, I could use YOUR help!
+      </p>
+    </div>
+    <p>
+      Please take a moment to visit the kiosk nearby and vote for my map for the <strong>People's Choice</strong> category.
+    </p>
+    <p>
+      Thanks! ♡
+    </p>
+  </aside>
+
+  <h2>Maps can be any size</h2>
+  <p>
+    This experiment sprang from my desire to become more competent with graphic design software.
+  </p>
+  <p>
+    I've been using <a href="https://affinity.serif.com/en-gb/">Affinity Designer</a> for a little over a year now. It's a very solid Illustrator replacement, and much more <a href="https://itunes.apple.com/us/app/Affinity_Designer/id824171161?mt=12&ign-mpt=uo%3D4" target="_blank">affordable</a> than Adobe's subscription model.
+  </p>
+  <p>
+    I had just finished <a href="https://github.com/mapbox/maki/pull/267" target="_blank">designing</a> a pixel-perfect garden center icon for the <a href="http://www.mapbox.com/maki">Maki</a> icon library. Communicating an idea with only 15 pixels square was a fun challenge.
+  </p>
+  <aside class="">
+    Take a second to look at that pull request. Mapbox is known for their great code reviews. I learned so much from mine! (Thanks Nathaniel)
+  </aside>
+
+  <div class="maki">
+    <em>Icons, to scale:</em>
+    <div class="to-scale" style="padding-bottom: 15px;">
+      <img src="garden-center-11.svg" alt="" />
+      <img src="garden-center-15.svg" alt="" />
+    </div>
+    <em>Icons, enlarged 10x:</em>
+    <div class="enlarged" style="padding-bottom: 15px;">
+      <img src="garden-center-11.svg" alt="" style="width:110px"/>
+      <img src="garden-center-15.svg" alt="" style="width:150px;"/>
+    </div>
+  </div>
+
+  <p>
+    I wanted to take this challenging limitation and apply it to maps.
+  </p>
+
+  <h2>The Challenge</h2>
+
+  <p>
+    Vectors are awesome, but sometimes your crisp, beautiful lines have to be turned into pixels. This is usually not a problem because of the high density pixels-per-inch of our modern displays, <strong>but what if you only gave yourself 64 pixels to play with?</strong>
+  </p>
+  <div class="grid">
+    <img src="grid.svg" alt="" style="width: 50%; display: block; margin: 0 auto; padding: 15px;"/>
+
+  </div>
+
+  <h2>Essential Geography</h2>
+  <p>
+    I downloaded relevant data from OpenStreetMap and <a href="http://www.naturalearthdata.org" target="_blank">NaturalEarth</a> and loaded them into ArcMap. After using the Simplify Geometry geoprocessing tool, I exported the data as SVG and loaded it into Affinity.
+  </p>
+  <p>
+    Then, using the lessons Nathaniel taught me in my pull request, I set about aligning and refining the geographic representations for perfect pixel presentation. This involved quite a bit of subtraction and simplification.
+  </p>
+  <div class="uk">
+    <img src="uk.svg" alt="" />
+    <p>
+      <em>Brit-ish Isles</em>
+    </p>
+  </div>
+
+  <h2>The Poster</h2>
+  <p>
+    In keeping with the <em>mini</em>mal style of the maps, I decided to make use of <em>tons</em> of <strong>negative space</strong> to make the maps feel even smaller.
+  </p>
+  <p>
+    Click on the image below to download a higher resolution copy.
+  </p>
+  <div class="poster">
+    <a href="Tiny Maps - final.tiff">
+      <img src="Tiny Maps - final.jpg" alt="" />
+    </a>
+  </div>
+
+  <h2>Where to next?</h2>
+  <p>
+    Want me to draw <em>your</em> favorite geography? Get in touch!
+  </p>
+  <p>
+    Just want to talk about maps? Get in touch anyways! I love helping people.
+  </p>
+</div>
+  <footer>
+    <div class="icons">
+      <a href="mailto:stephen@mapsmith.net" target="_blank">
+      <img src="close-envelope.svg" alt="" /></a>
+      <a href="http://www.twitter.com/themapsmith" target="_blank">
+      <img src="twitter-logo-silhouette.svg" alt="" /></a>
+      <a href="http://www.github.com/themapsmith" target="_blank">
+      <img src="github-logo.svg" alt="" /></a>
+      <p class="attribution">
+        <em>
+          <small>
+            Social icons designed by Freepik and distributed by Flaticon
+          </small>
+        </em>
+      </p>
+    </div>
+
+  </footer>
+
+</body>
+
 </html>
