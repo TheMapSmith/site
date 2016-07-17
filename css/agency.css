@@ -267,7 +267,7 @@ header {
     text-align: center;
     color: #EEDD5D;
     background-attachment: scroll;
-    background-image: url(../img/usa-resources.gif);
+    background-image: url(../usaresources/usa-resources.gif);
     background-position: center center;
     background-repeat: none;
     -webkit-background-size: cover;
@@ -308,7 +308,7 @@ header .intro-text .intro-heading {
         margin-bottom: 25px;
         font-family: "Droid Serif","Helvetica Neue",Helvetica,Arial,sans-serif;
         font-size: 40px;
-    
+
         line-height: 40px;
     }
 
