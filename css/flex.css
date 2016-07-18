@@ -14,6 +14,9 @@
 #bootstrap      { order: 10}
 #sat            { order: 8 }
 
+/*colors
+http://www.palettable.io/303545-F2EAD9-72DFDB-03A89E-F88A50*/
+
 body {
   font-family: 'Lato', sans-serif;
   font-size: 18px;
@@ -76,6 +79,71 @@ p { text-transform: lowercase;}
 }
 
 .words {
+  padding-bottom: 35px;
+}
+
+.words strong {
+  font-family: 'Fredoka One', cursive;
+  letter-spacing: 1px;
+  padding-left: 2px;
+}
+
+.capitalize { text-transform: capitalize;}
+
+.cta {
+  text-align: center;
+  padding: 25px;
+}
+
+.cta-button-teal {
+  background-color: #72DFDB;
+  color: #F2EAD9;
+  text-decoration: none;
+  text-shadow: 1px 1px 10px rgba(40,40,40,.5);
+  font-size: 20px;
+  font-weight: bold;
+  padding: 15px 75px;
+  border: 1px solid #03A89E;
+  border-radius: 10px;
+  box-shadow: 2px 4px 20px rgba(40,40,40,.25);
+  background: -webkit-gradient(linear, left top, left bottom, from(#72DFDB), to(#03a89e));
+  background: -webkit-linear-gradient(top, #72DFDB, #03a89e);
+  background: -moz-linear-gradient(top, #72DFDB, #03a89e);
+  background: -ms-linear-gradient(top, #72DFDB, #03a89e);
+  background: -o-linear-gradient(top, #72DFDB, #03a89e);
+  background-image: linear-gradient(#72DFDB, #03a89e);
+  cursor: default;
+}
+
+.cta-button-orange {
+  background-color: #F88A50;
+  color: white;
+  text-decoration: none;
+  text-shadow: 1px 1px 10px rgba(40,40,40,.5);
+  font-size: 20px;
+  font-weight: bold;
+  padding: 15px 75px;
+  border: 1px solid #DC6432;
+  border-radius: 10px;
+  box-shadow: 2px 4px 20px rgba(40,40,40,.25);
+  background: -webkit-gradient(linear, left top, left bottom, from(#f88a50), to(#dc6432));
+  background: -webkit-linear-gradient(top, #f88a50, #dc6432);
+  background: -moz-linear-gradient(top, #f88a50, #dc6432);
+  background: -ms-linear-gradient(top, #f88a50, #dc6432);
+  background: -o-linear-gradient(top, #f88a50, #dc6432);
+  background-image: linear-gradient(#f88a50, #dc6432);
+  cursor: default;
+}
+
+.cta-button-orange:hover {
+  text-shadow: 2px 2px 5px rgba(40,40,40,.75);
+  box-shadow: 2px 4px 20px rgba(40,40,40,.75);
+  background: -webkit-gradient(linear, left top, left bottom, from(#dc6432), to(#f88a50));
+  background: -webkit-linear-gradient(top, #dc6432, #f88a50);
+  background: -moz-linear-gradient(top, #dc6432, #f88a50);
+  background: -ms-linear-gradient(top, #dc6432, #f88a50);
+  background: -o-linear-gradient(top, #dc6432, #f88a50);
+  background-image: linear-gradient(#dc6432, #f88a50);
 }
 
 .legend { margin-bottom: 25px;}
