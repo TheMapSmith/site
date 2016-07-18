@@ -1,44 +1,18 @@
 /*item order */
 
-#usa-resources {
-  order: 1
-}
-#native {
-  order: 3
-}
-#tiny {
-  order: 2
-}
-#vtrr {
-  order: 4
-}
-#attract {
-  order: 5
-}
-#firefly {
-  order: 5
-}
-#atx {
-  order: 6
-}
-#tileaday {
-  order: 6
-}
-#neon {
-  order: 7
-}
-#golf {
-  order: 8
-}
-#graffiti {
-  order: 9
-}
-#bootstrap {
-  order: 10
-}
-#sat {
-  order: 8
-}
+#usa-resources  { order: 1 }
+#native         { order: 3 }
+#tiny           { order: 2 }
+#vtrr           { order: 4 }
+#attract        { order: 5 }
+#firefly        { order: 5 }
+#atx            { order: 6 }
+#tileaday       { order: 6 }
+#neon           { order: 7 }
+#sat            { order: 8 }
+#golf           { order: 8 }
+#graffiti       { order: 9 }
+#bootstrap      { order: 10}
 
 /*colors
 http://www.palettable.io/303545-F2EAD9-72DFDB-03A89E-F88A50*/
