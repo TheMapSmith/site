@@ -5,13 +5,14 @@
 #tiny           { order: 2 }
 #vtrr           { order: 4 }
 #attract        { order: 5 }
+#firefly        { order: 5 }
 #atx            { order: 6 }
-#firefly        { order: 6 }
 #tileaday       { order: 6 }
 #neon           { order: 7 }
 #golf           { order: 8 }
 #graffiti       { order: 9 }
 #bootstrap      { order: 10}
+#sat            { order: 8 }
 
 body {
   font-family: 'Lato', sans-serif;
@@ -141,18 +142,6 @@ text-align: center;
   padding-right: 5px;
 }
 
-/*.button {
-  text-decoration: none;
-  text-transform: lowercase;
-  background-color: #303545;
-  color: #F2EAD9;
-  padding: 3px;
-  margin-left: 15px;
-  padding-left: 7px;
-  border-radius: 5px;
-  box-shadow: 6px 6px 20px rgba(40,40,40,.25);
-}*/
-
 .button {
    border-top: 1px solid #0f1015;
    background: #303545;
@@ -188,6 +177,8 @@ text-align: center;
    }
 
 .button i { padding: 5px;}
+
+.buyme { display: none; }
 
 /*Landscape phones, phablets, portrait iPads*/
 @media only screen
