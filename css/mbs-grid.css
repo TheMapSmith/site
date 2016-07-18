@@ -1,0 +1,187 @@
+/*Generated using http://www.gridlover.net/app/*/
+
+/*==================================================
+=            Bootstrap 3 Media Queries             =
+==================================================*/
+
+    /*==========  Mobile First Method  ==========*/
+
+    /* Extra Small Devices, Phones */
+    @media only screen and (min-width : 480px) {
+      body {
+        font-size: 18px;
+        line-height: 29px;
+        margin: 0 auto;
+      }
+      h1 {
+        font-size: 76px;
+        line-height: 87px;
+        margin-top: 58px;
+        margin-bottom: 29px;
+      }
+      h2 {
+        font-size: 47px;
+        line-height: 58px;
+        margin-top: 58px;
+        margin-bottom: 29px;
+      }
+      h3 {
+        font-size: 29px;
+        line-height: 29px;
+        margin-top: 29px;
+        margin-bottom: 29px;
+      }
+      h4 {
+        font-size: 18px;
+        line-height: 29px;
+        margin-top: 29px;
+        margin-bottom: 29px;
+      }
+      p, ul, ol, pre, table, blockquote {
+        margin-top: 29px;
+        margin-bottom: 29px;
+      }
+
+      /* Sanitation */
+      hr {
+        border: 1px solid;
+        margin: -1px 0;
+      }
+      ul ul, ol ol, ul ol, ol ul {
+        margin-top: 0;
+        margin-bottom: 0;
+      }
+      b, strong, em, small, code {
+        line-height: 1;
+      }
+      sup, sub {
+        vertical-align: baseline;
+        position: relative;
+        top: -0.4em;
+      }
+      sub {
+        top: 0.4em;
+      }
+    }
+
+    /* Small Devices, Tablets */
+    @media only screen and (min-width : 768px) {
+      body {
+        font-size: 20px;
+        line-height: 32px;
+        margin: 0 auto;
+      }
+      .container {
+        max-width: 760px;
+      }
+      h1 {
+        font-size: 85px;
+        line-height: 96px;
+        margin-top: 64px;
+        margin-bottom: 32px;
+      }
+      h2 {
+        font-size: 52px;
+        line-height: 64px;
+        margin-top: 64px;
+        margin-bottom: 32px;
+      }
+      h3 {
+        font-size: 32px;
+        line-height: 32px;
+        margin-top: 32px;
+        margin-bottom: 32px;
+      }
+      h4 {
+        font-size: 20px;
+        line-height: 32px;
+        margin-top: 32px;
+        margin-bottom: 32px;
+      }
+      p, ul, ol, pre, table, blockquote {
+        margin-top: 32px;
+        margin-bottom: 32px;
+      }
+
+      /* Sanitation */
+      hr {
+        border: 1px solid;
+        margin: -1px 0;
+      }
+      ul ul, ol ol, ul ol, ol ul {
+        margin-top: 0;
+        margin-bottom: 0;
+      }
+      b, strong, em, small, code {
+        line-height: 1;
+      }
+      sup, sub {
+        vertical-align: baseline;
+        position: relative;
+        top: -0.4em;
+      }
+      sub {
+        top: 0.4em;
+      }
+    }
+
+    /* Large Devices, Wide Screens */
+    @media only screen and (min-width : 1200px) {
+      body {
+        font-size: 22px;
+        line-height: 35px;
+        margin: 0 auto;
+      }
+      .container {
+        max-width: 760px;
+      }
+      h1 {
+        font-size: 93px;
+        line-height: 105px;
+        margin-top: 70px;
+        margin-bottom: 35px;
+      }
+      h2 {
+        font-size: 58px;
+        line-height: 70px;
+        margin-top: 70px;
+        margin-bottom: 35px;
+      }
+      h3 {
+        font-size: 36px;
+        line-height: 70px;
+        margin-top: 35px;
+        margin-bottom: 35px;
+      }
+      h4 {
+        font-size: 22px;
+        line-height: 35px;
+        margin-top: 35px;
+        margin-bottom: 35px;
+      }
+      p, ul, ol, pre, table, blockquote {
+        margin-top: 35px;
+        margin-bottom: 35px;
+      }
+
+      /* Sanitation */
+      hr {
+        border: 1px solid;
+        margin: -1px 0;
+      }
+      ul ul, ol ol, ul ol, ol ul {
+        margin-top: 0;
+        margin-bottom: 0;
+      }
+      b, strong, em, small, code {
+        line-height: 1;
+      }
+      sup, sub {
+        vertical-align: baseline;
+        position: relative;
+        top: -0.4em;
+      }
+      sub {
+        top: 0.4em;
+      }
+    }

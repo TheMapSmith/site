@@ -1,0 +1,342 @@
+/*item order */
+
+#usa-resources  { order: 1 }
+#native         { order: 3 }
+#tiny           { order: 2 }
+#vtrr           { order: 4 }
+#attract        { order: 5 }
+#firefly        { order: 5 }
+#atx            { order: 6 }
+#tileaday       { order: 6 }
+#neon           { order: 7 }
+#sat            { order: 8 }
+#golf           { order: 8 }
+#graffiti       { order: 9 }
+#bootstrap      { order: 10}
+/*colors
+http://www.palettable.io/303545-F2EAD9-72DFDB-03A89E-F88A50*/
+
+body {
+  font-family: 'Lato', sans-serif;
+  font-size: 18px;
+  line-height: 1.5;
+  color: #303545;
+  background-color: #F2EAD9;
+}
+h1, h2, h3, h4, h5 {
+  font-family: 'Fredoka One', cursive;
+  text-transform: uppercase;
+}
+p {
+  text-transform: lowercase;
+}
+.container {
+  max-width: 1750px;
+  margin: 0 auto;
+}
+.header {
+  text-align: center;
+}
+#logo {
+  max-width: 100%;
+  height: auto;
+}
+
+/*iPhone 5 landscape*/
+
+@media (max-height: 321px) and (max-width: 569px) {
+  #logo {
+    height: 300px;
+  }
+}
+
+/*iPhone 6 landscape*/
+
+@media (max-height: 375px) and (min-width: 667px) {
+  #logo {
+    height: 375px;
+  }
+}
+
+/*iPhone 6+ landscape*/
+
+@media (max-height: 415px) and (min-width: 735px) {
+  #logo {
+    height: 400px;
+  }
+}
+.flex-content {
+  display: flex;
+}
+.content {
+  padding: 10px;
+  max-width: 650px;
+  margin: 0 auto;
+}
+.title h1 {
+  text-align: center;
+  font-size: 1.85em;
+}
+.words {
+  padding-bottom: 35px;
+}
+.words strong {
+  font-family: 'Fredoka One', cursive;
+  letter-spacing: 1px;
+  padding-left: 2px;
+}
+.capitalize {
+  text-transform: capitalize;
+}
+.cta {
+  text-align: center;
+  padding: 25px;
+}
+.cta-button-teal {
+  background-color: #72DFDB;
+  color: #F2EAD9;
+  text-decoration: none;
+  text-shadow: 1px 1px 10px rgba(40, 40, 40, .5);
+  font-size: 20px;
+  font-weight: bold;
+  padding: 15px 75px;
+  border: 1px solid #03A89E;
+  border-radius: 10px;
+  box-shadow: 2px 4px 20px rgba(40, 40, 40, .25);
+  background: -webkit-gradient(linear, left top, left bottom, from(#72DFDB), to(#03a89e));
+  background: -webkit-linear-gradient(top, #72DFDB, #03a89e);
+  background: -moz-linear-gradient(top, #72DFDB, #03a89e);
+  background: -ms-linear-gradient(top, #72DFDB, #03a89e);
+  background: -o-linear-gradient(top, #72DFDB, #03a89e);
+  background-image: linear-gradient(#72DFDB, #03a89e);
+  cursor: default;
+}
+.cta-button-orange {
+  background-color: #F88A50;
+  color: white;
+  text-decoration: none;
+  text-shadow: 1px 1px 10px rgba(40, 40, 40, .5);
+  font-size: 20px;
+  font-weight: bold;
+  padding: 15px 75px;
+  border: 1px solid #DC6432;
+  border-radius: 10px;
+  box-shadow: 2px 4px 20px rgba(40, 40, 40, .25);
+  background: -webkit-gradient(linear, left top, left bottom, from(#f88a50), to(#dc6432));
+  background: -webkit-linear-gradient(top, #f88a50, #dc6432);
+  background: -moz-linear-gradient(top, #f88a50, #dc6432);
+  background: -ms-linear-gradient(top, #f88a50, #dc6432);
+  background: -o-linear-gradient(top, #f88a50, #dc6432);
+  background-image: linear-gradient(#f88a50, #dc6432);
+  cursor: default;
+}
+.cta-button-orange:hover {
+  text-shadow: 2px 2px 5px rgba(40, 40, 40, .75);
+  box-shadow: 2px 4px 20px rgba(40, 40, 40, .75);
+  background: -webkit-gradient(linear, left top, left bottom, from(#dc6432), to(#f88a50));
+  background: -webkit-linear-gradient(top, #dc6432, #f88a50);
+  background: -moz-linear-gradient(top, #dc6432, #f88a50);
+  background: -ms-linear-gradient(top, #dc6432, #f88a50);
+  background: -o-linear-gradient(top, #dc6432, #f88a50);
+  background-image: linear-gradient(#dc6432, #f88a50);
+}
+.legend {
+  margin-bottom: 25px;
+}
+.legend-flex {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+/*.legend-item { border: 1px solid black; }*/
+
+.legend-item i {
+  padding-right: 10px;
+}
+
+/*legend order*/
+
+#symbols {
+  order: 1;
+  flex-grow: 1;
+}
+#pub {
+  order: 3;
+  flex-grow: 2;
+}
+#award {
+  order: 2;
+  flex-grow: 2;
+}
+#comm {
+  order: 4;
+  flex-grow: 2;
+}
+.portfolio {
+  text-align: center;
+  margin: 0 auto;
+  border-bottom: 2px dotted #303540;
+  max-width: 650px;
+}
+.portfolio h2 {
+  line-height: .125;
+  ;
+}
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+.flex-item {
+  margin: 10px;
+  padding: 10px;
+  padding-bottom: 50px;
+  border-bottom: 1px dotted #303540;
+}
+.img-responsive {
+  width: 100%;
+  height: auto;
+}
+.img-shadow {
+  box-shadow: 5px 10px 20px rgba(40, 40, 40, .25)
+}
+.item-title {
+  line-height: 1;
+  text-align: center;
+}
+.item-img {
+  padding-bottom: 10px;
+}
+.item-awards {
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+.item-awards i {
+  padding-right: 5px;
+}
+.button {
+  border-top: 1px solid #0f1015;
+  background: #303545;
+  background: -webkit-gradient(linear, left top, left bottom, from(#303545), to(#0f1015));
+  background: -webkit-linear-gradient(top, #303545, #0f1015);
+  background: -moz-linear-gradient(top, #303545, #0f1015);
+  background: -ms-linear-gradient(top, #303545, #0f1015);
+  background: -o-linear-gradient(top, #303545, #0f1015);
+  background-image: linear-gradient(#303545, #0f1015);
+  padding: 5px 10px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px;
+  -webkit-box-shadow: rgba(0, 0, 0, 1) 0 1px 0;
+  -moz-box-shadow: rgba(0, 0, 0, 1) 0 1px 0;
+  box-shadow: 6px 6px 20px rgba(40, 40, 40, .25);
+  text-shadow: rgba(0, 0, 0, .4) 0 1px 0;
+  color: #f2ead9;
+  font-size: 14px;
+  text-decoration: none;
+  text-transform: lowercase;
+  vertical-align: middle;
+}
+.button:hover {
+  border-top-color: #363c4d;
+  background: #363c4d;
+  color: #ffffff;
+}
+.button:active {
+  border-top-color: #f2ead9;
+  background: #f2ead9;
+  color: black;
+}
+.button i {
+  padding: 5px;
+}
+.buyme {
+  display: none;
+}
+@media only screen and (min-width: 450px) {
+  .title h1 {
+    font-size: 2.5em;
+  }
+}
+
+/*Landscape phones, phablets, portrait iPads*/
+
+@media only screen and (min-width: 480px) and (max-width: 769px) {}
+
+/*set legend to row at this level*/
+
+@media only screen and (min-width: 500px) {
+  .legend-flex {
+    flex-direction: row;
+  }
+  #logo {
+    max-height: 512px;
+  }
+  .title h1 {
+    font-size: 2.5em;
+  }
+}
+
+/*iPad landscape and smaller desktops and half-windows*/
+
+@media only screen and (min-width: 768px) and (max-width: 961px) {}
+@media only screen and (min-width: 1125px) {
+  .flex-item {
+    border-bottom: none;
+  }
+}
+
+/*desktops*/
+
+@media only screen and (min-width: 962px) and (max-width: 1999px) {}
+
+/*4k+*/
+
+@media only screen and (min-width: 2000px) {
+  .flex-item {
+    border-bottom: none;
+  }
+}
+
+/*icomoon stylesheet:*/
+
+@font-face {
+  font-family: 'icomoon';
+  src: url('../fonts/icomoon.eot?yv1oz3');
+  src: url('../fonts/icomoon.eot?yv1oz3#iefix') format('embedded-opentype'), url('../fonts/icomoon.ttf?yv1oz3') format('truetype'), url('../fonts/icomoon.woff?yv1oz3') format('woff'), url('../fonts/icomoon.svg?yv1oz3#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+i {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.icon-book:before {
+  content: "\e903";
+}
+.icon-money:before {
+  content: "\e900";
+}
+.icon-dollar:before {
+  content: "\e901";
+}
+.icon-usd:before {
+  content: "\e901";
+}
+.icon-trophy:before {
+  content: "\e902";
+}

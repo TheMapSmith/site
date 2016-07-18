@@ -5,7 +5,7 @@ html, body {
 
 header {
     color: #f0d890;
-    background-image: url(../proj/native/reservations_poster_final-bg.jpg);
+    background-image: url(../native/reservations_poster_final-bg.jpg);
 }
 
 .navbar, .navbar-brand, .navbar-default {

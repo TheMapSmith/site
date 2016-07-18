@@ -1,0 +1,805 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <!-- Basic Page Needs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta charset="utf-8">
+  <title>Firef.ly Map Style Review</title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- FONT
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+
+  <!-- CSS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/skeleton.css">
+  <link rel="stylesheet" href="css/custom.css">
+
+  <!-- Favicon
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <!-- <link rel="icon" type="image/png" href="images/favicon.png"> -->
+
+  <!-- Livereload
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <!-- <script type="text/javascript" src="http://localhost:35729/livereload.js"></script> -->
+
+</head>
+<body>
+
+  <!-- Primary Page Layout
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <div class="container">
+    <div class="row">
+      <div class="twelve columns">
+        <img src="images/header.jpg" class="u-max-full-width" alt="" />
+
+      </div>
+      <div class="two-thirds column">
+        <h1>Map Style Guide</h1>
+        <h3>A layer-by-layer review</h3>
+        <p>
+          <a href="http://firef.ly/" target="_blank">Firef.ly</a> is a new travel
+          app out in beta right now.
+        </p>
+        <blockquote cite="http://firef.ly">
+          Firef.ly is a mobile app that distills the best of trip planning, travel
+          guides, journalling, sharing and personalised mementos, designed for
+          today’s smartphone-enabled travel
+        </blockquote>
+        <p>
+          <i>(<a href="https://t.co/8KGz6DU7b5" target="_blank">Sign up for the beta</a>)</i>
+        </p>
+        <p>
+          I designed a "Day" and a "Night" style using
+          <a href="https://www.mapbox.com/mapbox-studio/" target="_blank">Mapbox Studio</a>
+          to accompany the app. By using the <a href="https://www.mapbox.com/blog/introducing-streets-v7/" target="_blank">latest OpenStreetMap data</a>
+          and <a href="https://www.mapbox.com/blog/better-label-placement-in-mapbox-studio/" target="_blank">layer compositing</a> tools,
+          the result is a stylish, accurate, performant map for use in the app.
+        </p>
+        <p>
+          Below are all the major design elements used in the map.
+          You can browse a side-by-side interactive map by clicking below.
+        </p>
+        <a href="http://bl.ocks.org/TheMapSmith/raw/b9b4a46967462cdbc7f6/" target="_blank">
+          <button type="button" name="button">Browse the Styles</button></a>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="row-head">
+        <h4>Typography</h4>
+      </div>
+
+      <div class="row-subhead u-cf">
+        <h5>Countries</h5>
+      </div>
+      <div class="three columns">
+        <strong>Day</strong>
+        <div class="hex">
+          <code>#484444</code>
+        </div>
+        <div class="map-img">
+          <img src="images/day/country.png" alt="" />
+        </div>
+      </div>
+      <div class="three columns">
+        <strong>Night</strong>
+        <div class="hex">
+          <code>#979190</code>
+        </div>
+        <div class="map-img">
+          <img src="images/night/country.png" alt="" />
+        </div>
+      </div>
+      <div class="four columns info">
+        <strong>Info</strong>
+        <p>
+          <h3 class="public-gothic">Public Gothic</h3>
+          <i>Font range (px):</i>
+          <ul>
+            <li>Large: 10 - 34</li>
+            <li>Medium: 10 - 24</li>
+            <li>Small: 10 - 22</li>
+          </ul>
+        </p>
+      </div>
+
+      <div class="row-subhead u-cf">
+        <h5>States</h5>
+      </div>
+      <div class="three columns">
+        <strong>Day</strong>
+        <div class="hex">
+          <code>#242424</code>
+        </div>
+        <div class="map-img">
+          <img src="images/day/state.png" alt="" />
+        </div>
+      </div>
+      <div class="three columns">
+        <strong>Night</strong>
+        <div class="hex">
+          <code>#979190</code>
+        </div>
+        <div class="map-img">
+          <img src="images/night/state.png" alt="" />
+        </div>
+      </div>
+      <div class="four columns info">
+        <strong>Info</strong>
+        <p>
+          <h3 class="public-gothic">Public Gothic</h3>
+          <i>Letter spacing: 0.5 em</i> <br>
+          <i>Font range (px):</i>
+          <ul>
+            <li>Large: 10 - 18</li>
+            <li>Medium: 10 - 16</li>
+            <li>Small: 10 - 14</li>
+          </ul>
+        </p>
+      </div>
+
+      <div class="row-subhead u-cf">
+        <h5>Cities - Large</h5>
+      </div>
+      <div class="three columns">
+        <strong>Day</strong>
+        <div class="hex">
+          <code>#484444</code>
+        </div>
+        <div class="map-img">
+          <img src="images/day/city_lg.png" alt="" />
+        </div>
+      </div>
+      <div class="three columns">
+        <strong>Night</strong>
+        <div class="hex">
+          <code>#BBB8B7</code>
+        </div>
+        <div class="map-img">
+          <img src="images/night/city_lg.png" alt="" />
+        </div>
+      </div>
+      <div class="four columns info">
+        <strong>Info</strong>
+        <p>
+          <h3 class="public-gothic">Public Gothic</h3>
+          <i>Font range (px):</i>
+          <ul>
+            <li>Large: 12 - 22</li>
+          </ul>
+        </p>
+      </div>
+
+      <div class="row-subhead u-cf">
+        <h5>Cities - Small</h5>
+      </div>
+      <div class="three columns">
+        <strong>Day</strong>
+        <div class="hex">
+          <code>#484444</code>
+        </div>
+        <div class="map-img">
+          <img src="images/day/city_sm.png" alt="" />
+        </div>
+      </div>
+      <div class="three columns">
+        <strong>Night</strong>
+        <div class="hex">
+          <code>#BBB8B7</code>
+        </div>
+        <div class="map-img">
+          <img src="images/night/city_sm.png" alt="" />
+        </div>
+      </div>
+      <div class="four columns info">
+        <strong>Info</strong>
+        <p>
+          <h3 class="public-gothic">Public Gothic</h3>
+          <i>Font range (px):</i>
+          <ul>
+            <li>Medium: 12 - 22</li>
+            <li>Small: 12 - 22</li>
+          </ul>
+          <i>(Each has a different min zoom)</i>
+        </p>
+      </div>
+
+      <div class="row-subhead u-cf">
+        <h5>Towns</h5>
+      </div>
+      <div class="three columns">
+        <strong>Day</strong>
+        <div class="hex">
+          <code>#646160</code>
+        </div>
+        <div class="map-img">
+          <img src="images/day/town.png" alt="" />
+        </div>
+      </div>
+      <div class="three columns">
+        <strong>Night</strong>
+        <div class="hex">
+          <code>#C9BAB5</code>
+        </div>
+        <div class="map-img">
+          <img src="images/night/town.png" alt="" />
+        </div>
+      </div>
+      <div class="four columns info">
+        <strong>Info</strong>
+        <p>
+          <h5 class="roe">Roemisch <br>
+          <small>Stehend Regular</small>
+          </h5>
+          <i>Font range (px):</i>
+          <ul>
+            <li>11 - 20</li>
+          </ul>
+        </p>
+      </div>
+
+      <div class="row-subhead u-cf">
+        <h5>Villages</h5>
+      </div>
+      <div class="three columns">
+        <strong>Day</strong>
+        <div class="hex">
+          <code>#484444</code>
+        </div>
+        <div class="map-img">
+          <img src="images/day/village.png" alt="" />
+        </div>
+      </div>
+      <div class="three columns">
+        <strong>Night</strong>
+        <div class="hex">
+          <code>#BBB8B7</code>
+        </div>
+        <div class="map-img">
+          <img src="images/night/village.png" alt="" />
+        </div>
+      </div>
+      <div class="four columns info">
+        <strong>Info</strong>
+        <p>
+          <h5 class="roe-lite">Roemisch<br>
+          <small>Stehend Light</small>
+          </h5>
+          <i>Font range (px):</i>
+          <ul>
+            <li>11 - 18</li>
+          </ul>
+        </p>
+      </div>
+
+      <div class="row-subhead u-cf">
+        <h5>Hamlets</h5>
+      </div>
+      <div class="three columns">
+        <strong>Day</strong>
+        <div class="hex">
+          <code>#484444</code>
+        </div>
+        <div class="map-img">
+          <img src="images/day/hamlet.png" alt="" />
+        </div>
+      </div>
+      <div class="three columns">
+        <strong>Night</strong>
+        <div class="hex">
+          <code>#BBB8B7</code>
+        </div>
+        <div class="map-img">
+          <img src="images/night/hamlet.png" alt="" />
+        </div>
+      </div>
+      <div class="four columns info">
+        <strong>Info</strong>
+        <p>
+          <h5 class="roe">Roemisch<br>
+          <small>Stehend Regular</small>
+          </h5>
+          <i>Font range (px):</i>
+          <ul>
+            <li>11 - 16</li>
+          </ul>
+        </p>
+      </div>
+
+      <div class="row-subhead u-cf">
+        <h5>Suburbs</h5>
+      </div>
+      <div class="three columns">
+        <strong>Day</strong>
+        <div class="hex">
+          <code>#323030</code>
+        </div>
+        <div class="map-img">
+          <img src="images/day/suburb.png" alt="" />
+        </div>
+      </div>
+      <div class="three columns">
+        <strong>Night</strong>
+        <div class="hex">
+          <code>#F1EDEB</code>
+        </div>
+        <div class="map-img">
+          <img src="images/night/suburb.png" alt="" />
+        </div>
+      </div>
+      <div class="four columns info">
+        <strong>Info</strong>
+        <p>
+          <h5 class="roe-ita-lite">Roemisch<br>
+          <small>Liegend Har (Light)</small>
+          </h5>
+          <i>Font range (px):</i>
+          <ul>
+            <li>11 - 18</li>
+          </ul>
+        </p>
+      </div>
+
+      <div class="row-subhead u-cf">
+        <h5>Neighborhoods</h5>
+      </div>
+      <div class="three columns">
+        <strong>Day</strong>
+        <div class="hex">
+          <code>#323030</code>
+        </div>
+        <div class="map-img">
+          <img src="images/day/neighborhood.png" alt="" />
+        </div>
+      </div>
+      <div class="three columns">
+        <strong>Night</strong>
+        <div class="hex">
+          <code>#F1EDEB</code>
+        </div>
+        <div class="map-img">
+          <img src="images/night/neighborhood.png" alt="" />
+        </div>
+      </div>
+      <div class="four columns info">
+        <strong>Info</strong>
+        <p>
+          <h5 class="roe">Roemisch<br>
+          <small>Stehend Regular</small>
+          </h5>
+          <i>Font range (px):</i>
+          <ul>
+            <li>11 - 16</li>
+          </ul>
+        </p>
+      </div>
+
+      <div class="row-subhead u-cf">
+        <h5>Roads</h5>
+      </div>
+      <div class="three columns">
+        <strong>Day</strong>
+        <div class="hex">
+          <code>#484444</code>
+        </div>
+        <div class="map-img">
+          <img src="images/day/road-typ.png" alt="" />
+        </div>
+      </div>
+      <div class="three columns">
+        <strong>Night</strong>
+        <div class="hex">
+          <code>#BBB8B7</code>
+        </div>
+        <div class="map-img">
+          <img src="images/night/road-typ.png" alt="" />
+        </div>
+      </div>
+      <div class="four columns info">
+        <strong>Info</strong>
+        <p>
+          <h5 class="roe">Roemisch<br>
+          <small>Stehend Regular</small>
+          </h5>
+          <i>Font range (px):</i>
+          <ul>
+            <li>Large: 10 - 16</li>
+            <li>Medium: 10 - 14</li>
+            <li>Small: 10 - 13</li>
+          </ul>
+        </p>
+      </div>
+
+      <div class="row-subhead u-cf">
+        <h5>Highway Shields</h5>
+      </div>
+      <div class="three columns">
+        <strong>Day</strong>
+        <div class="hex">
+          <code>#484444</code>
+        </div>
+        <div class="map-img">
+          <img src="images/day/shields.png" alt="" />
+        </div>
+      </div>
+      <div class="three columns">
+        <strong>Night</strong>
+        <div class="hex">
+          <code>#F1EDEB</code>
+        </div>
+        <div class="map-img">
+          <img src="images/night/shields.png" alt="" />
+        </div>
+      </div>
+      <div class="four columns info">
+        <strong>Info</strong>
+        <p>
+          <h5 class="replica-bold">Replica Bold</h5>
+          <i>Font size (px):</i>
+          <ul>
+            <li>9</li>
+          </ul>
+        </p>
+      </div>
+
+      <div class="row-subhead u-cf">
+        <h5>Water and Waterways</h5>
+      </div>
+      <div class="three columns">
+        <strong>Day</strong>
+        <div class="hex">
+          <code>#70CDD8</code>
+        </div>
+        <div class="map-img">
+          <img src="images/day/waterway.png" alt="" />
+        </div>
+      </div>
+      <div class="three columns">
+        <strong>Night</strong>
+        <div class="hex">
+          <code>#4FB2C4</code>
+        </div>
+        <div class="map-img">
+          <img src="images/night/waterway.png" alt="" />
+        </div>
+      </div>
+      <div class="four columns info">
+        <strong>Info</strong>
+        <p>
+          <h5 class="roe-obl-lite">Roemisch <br>
+            <small>Reverse Oblique</small>
+          </h5>
+          <i>Font size (px):</i>
+          <ul>
+            <li>Large: 13 - 18</li>
+            <li>Small: 13 - 16</li>
+          </ul>
+        </p>
+      </div>
+
+      <div class="row-subhead u-cf">
+        <h5>Airports</h5>
+      </div>
+      <div class="three columns">
+        <strong>Day</strong>
+        <div class="hex">
+          <code>#484444</code>
+        </div>
+        <div class="map-img">
+          <img src="images/day/airport.png" alt="" />
+        </div>
+      </div>
+      <div class="three columns">
+        <strong>Night</strong>
+        <div class="hex">
+          <code>#BBB8B7</code>
+        </div>
+        <div class="map-img">
+          <img src="images/night/airport.png" alt="" />
+        </div>
+      </div>
+      <div class="four columns info">
+        <strong>Info</strong>
+        <p>
+          <h5 class="roe">Roemisch <br>
+            <small>Stehend Regular</small>
+          </h5>
+          <i>Font size (px):</i>
+          <ul>
+            <li>12 - 18</li>
+          </ul>
+        </p>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="row-subhead">
+        <h5>Typographic Relationships</h5>
+        <p>
+          Showing the size of each text element and it's relationship to
+          other labels on at the same time.
+        </p>
+      </div>
+      <div class="twelve columns">
+        <img src="images/text-scales.png" class="u-max-full-width" alt="" />
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="row-head">
+        <h4>Background</h4>
+      </div>
+      <div class="three columns">
+        <strong>Day</strong>
+        <div class="hex">
+          <code>#F1EDEB</code>
+        </div>
+        <div class="map-img">
+          <img src="images/day/background.png" alt="" />
+        </div>
+      </div>
+      <div class="three columns">
+        <strong>Night</strong>
+        <div class="hex">
+          <code>#323030</code>
+        </div>
+        <div class="map-img">
+          <img src="images/night/background.png" alt="" />
+        </div>
+      </div>
+      <div class="four columns info">
+        <strong>Info</strong>
+        <p>
+          A lightly debossed hatch texture overlaid on a solid backdrop.
+        </p>
+      </div>
+
+      <div class="row-subhead u-cf">
+        <h5>Water</h5>
+      </div>
+      <div class="three columns">
+        <strong>Day</strong>
+        <div class="hex">
+          <code>#4FB2C4</code>
+        </div>
+        <div class="map-img">
+          <img src="images/day/water.png" alt="" />
+        </div>
+      </div>
+      <div class="three columns">
+        <strong>Night</strong>
+        <div class="hex">
+          <code>#103C49</code>
+        </div>
+        <div class="map-img">
+          <img src="images/night/water.png" alt="" />
+        </div>
+      </div>
+      <div class="four columns info">
+        <strong>Info</strong>
+        <p>
+          A light "X" texture resembling folded paper. <br>
+          Detail:
+        </p>
+        <img src="images/day/water-tex.png" alt="" />
+      </div>
+
+      <div class="row-subhead u-cf">
+        <h5>Landcover: Greens</h5>
+        <p>
+          Forest, scrub, grass, crop
+        </p>
+      </div>
+      <div class="three columns">
+        <strong>Day</strong>
+        <div class="hex">
+          <code>#899A70</code>
+          <code>#B6BEA6</code>
+          <code>#DBDBD1</code>
+          <code>#EBE8E4</code>
+        </div>
+        <div class="map-img">
+          <img src="images/day/landcover.png" alt="" />
+        </div>
+      </div>
+      <div class="three columns">
+        <strong>Night</strong>
+        <div class="hex">
+          <code>#52732E</code>
+          <code>#576E3B</code>
+          <code>#5B6A47</code>
+          <code>#5F6554</code>
+        </div>
+        <div class="map-img">
+          <img src="images/night/landcover.png" alt="" />
+        </div>
+      </div>
+      <div class="four columns info">
+        <strong>Info</strong>
+        <p>
+          A custom gradient across the four landcover classes:
+        </p>
+      </div>
+
+      <div class="row-subhead u-cf">
+        <h5>Landcover: Snow</h5>
+        <p>
+          Snow
+        </p>
+      </div>
+      <div class="three columns">
+        <strong>Day</strong>
+        <div class="hex">
+          <code>#F3F0EF</code>
+        </div>
+        <div class="map-img">
+          <img src="images/day/ice.png" alt="" />
+        </div>
+      </div>
+      <div class="three columns">
+        <strong>Night</strong>
+        <div class="hex">
+          <code>#595959</code>
+        </div>
+        <div class="map-img">
+          <img src="images/night/ice.png" alt="" />
+        </div>
+      </div>
+      <div class="four columns info">
+        <strong>Info</strong>
+        <p>
+          A light gray color to indicate areas mainly covered in snow.
+        </p>
+      </div>
+
+      <div class="row-subhead u-cf">
+        <h5>Land Use: Green spaces</h5>
+        <p>
+          Parks, cemeteries, grass, trees
+        </p>
+      </div>
+      <div class="three columns">
+        <strong>Day</strong>
+        <div class="hex">
+          <code>#899A70</code>
+        </div>
+        <div class="map-img">
+          <img src="images/day/park.png" alt="" />
+        </div>
+      </div>
+      <div class="three columns">
+        <strong>Night</strong>
+        <div class="hex">
+          <code>#2B391A</code>
+        </div>
+        <div class="map-img">
+          <img src="images/night/park.png" alt="" />
+        </div>
+      </div>
+      <div class="four columns info">
+        <strong>Info</strong>
+        <p>
+          Same color as <code>landcover: grass</code>
+          Includes a double-carat texture. <br>
+          Detail:
+        </p>
+        <img src="images/day/park-tex.png" alt="" />
+      </div>
+
+      <div class="row-subhead u-cf">
+        <h5>Land Use: Institutions</h5>
+        <p>
+          Hospitals and schools
+        </p>
+      </div>
+      <div class="three columns">
+        <strong>Day</strong>
+        <div class="hex">
+          <code>#F7E6BA</code>
+        </div>
+        <div class="map-img">
+          <img src="images/day/school.png" alt="" />
+        </div>
+      </div>
+      <div class="three columns">
+        <strong>Night</strong>
+        <div class="hex">
+          <code>#957D4A</code>
+        </div>
+        <div class="map-img">
+          <img src="images/night/school.png" alt="" />
+        </div>
+      </div>
+      <div class="four columns info">
+        <strong>Info</strong>
+        <p>
+          A light yellow with a crosshatch brings a splash of color to the map.
+          <br>
+          Detail:
+        </p>
+        <img src="images/day/inst-tex.png" alt="" />
+      </div>
+
+      <div class="row-subhead u-cf">
+        <h5>Roads</h5>
+        <p>
+          Motorways, primary, secondary, tertiary, and streets.
+        </p>
+      </div>
+      <div class="three columns">
+        <strong>Day</strong>
+        <div class="hex">
+          <code>#979190</code>
+          <code>#BBB8B7</code>
+          <code>#FDFDFD</code>
+        </div>
+        <div class="map-img">
+          <img src="images/day/road.png" alt="" />
+        </div>
+      </div>
+      <div class="three columns">
+        <strong>Night</strong>
+        <div class="hex">
+          <code>#979190</code>
+          <code>#908B8A</code>
+          <code>#646160</code>
+        </div>
+        <div class="map-img">
+          <img src="images/night/road.png" alt="" />
+        </div>
+      </div>
+      <div class="four columns info">
+        <strong>Info</strong>
+        <p>
+          Shades of grey and line width delineate the various classes of roads.
+        </p>
+      </div>
+
+      <div class="row-subhead u-cf">
+        <h5>Buildings</h5>
+      </div>
+      <div class="three columns">
+        <strong>Day</strong>
+        <div class="hex">
+          <code>#E1DDDB</code>
+        </div>
+        <div class="map-img">
+          <img src="images/day/bldg.png" alt="" />
+        </div>
+      </div>
+      <div class="three columns">
+        <strong>Night</strong>
+        <div class="hex">
+          <code>#555251</code>
+        </div>
+        <div class="map-img">
+          <img src="images/night/bldg.png" alt="" />
+        </div>
+      </div>
+      <div class="four columns info">
+        <strong>Info</strong>
+        <p>
+          A simple grey polygon with subtle outline and grid pattern.
+          <br>
+          Detail:
+        </p>
+        <img src="images/day/bldg-tex.png" alt="" />
+      </div>
+
+    </div>
+
+  </div>
+
+<!-- End Document
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+</body>
+</html>

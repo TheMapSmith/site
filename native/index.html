@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Native American Lands</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="../css/agency.css" rel="stylesheet">
+    <link href="../css/style.css" rel="stylesheet">
+    <link href="../css/native.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="../fonts/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href='http://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body id="page-top" class="index">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand page-scroll" href="index.html">MapSmith</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="hidden">
+                        <a href="#page-top"></a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="index.html" style="text-decoration: none; line-height: 1;">Portfolio</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+
+    <!-- Header -->
+    <header>
+      <div class="dim">
+        <div class="container">
+            <div class="intro-text">
+                <div class="intro-lead-in">A Modern Map of</div>
+                <div class="intro-heading">Native American Lands</div>
+                <a href="#download" class="page-scroll btn btn-xln">Get The Map</a>
+            </div>
+        </div>
+      </div>
+    </header>
+
+    <section>
+      <div class="container">
+        <h1>The Impetus</h1>
+        <h2>A Retro Gift</h2>
+        <p>
+          I created this as a gift for my map-loving cousin who is is part
+          Native American and works in DC as an attorney for the National
+          Indian Gaming Commission. I found out from his wife that
+          he really liked the
+          <a href="https://www.census.gov/geo/maps-data/maps/aian_wall_maps.html" target="_blank" id="aianmap">
+            official maps</a> put out by the US Census, but wanted "something retro"
+            with the same data.
+          <img src="AIAN_US_2010.jpg" alt="us census map"
+            class="img-responsive img-centered" />
+        </p>
+        <p>
+          That seemed simple enough. Let's see what the data looks like.
+        </p>
+      </div>
+    </section>
+
+    <section class="water">
+      <div class="container">
+        <h1>The Data</h1>
+        <h2>US Census to the rescue</h2>
+        <p>
+          Thanks to the super useful Census TIGER program, the
+          <a href="https://www.census.gov/geo/maps-data/data/cbf/cbf_aiannh.html" target="_blank" id="aianDL">American Indian and Alaskan Native (AIAN) shapefile</a>
+          was easy to download.
+        </p>
+        <aside class="devgoogle shadow">
+          <a href="https://www.google.com/#q=us+census+aian+shapefile" target="_blank" id="#DG">
+          <button type="button" name="button" class="dg">#devgoogle</button></a>
+          <code>us census aian shapefile</code>
+        </aside>
+        <p class="center">
+          <small><i><strong>Note:</strong> In the spirit of honesty and transparency, I'm going
+            to list each significant item that I Googled during the course of the project.
+            Nobody knows everything, so the less we <strong>appear</strong> like we
+            do, the more encouraging it is for beginners to begin learning.</i></small>
+        </p>
+
+        <img src="aian_basic.png" alt="american indian basic" class="img-responsive img-centered" style="max-height: 400px; " />
+
+        <p>
+          The attributes were a little opaque, but after some searching I found that the
+          <a href="https://www.census.gov/geo/reference/mtfcc.html" target="_blank" id="mtfcc"><code>MTFCC</code></a> field was the key attribute for the reservations.
+        </p>
+
+        <img src="aian_attributes.png" alt="census attributes" class="img-responsive img-centered" style="max-height: 400px;"/>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <h1>Reference Data</h1>
+        <h3>This was the easy part</h3>
+        <p>
+          Thanks to <a href="http://www.naturalearthdata.com/" target="_blank" id="NEdata">NaturalEarth Data</a>,
+          basic background information is <em>extremely</em> easy to come up with.
+          I highly recommend using their data for all your small-scale mapping needs.
+        </p>
+        <p style="text-align: center">
+
+
+        <a href="http://www.naturalearthdata.com/" target="_blank">
+        <img class="img-responsive img-centered"
+          src="../usaresources/NaturalEarth_screenshot.png"
+          alt="Cropscape data layer national processed and smoothed"
+          style="max-height: 600px;" />
+          <i>Source: NaturalEarth Data</i>
+          </a>
+          </p>
+      </div>
+    </section>
+
+    <section class="AK">
+      <div class="container">
+        <h1>The Inspiration</h1>
+        <h2>Something Retro</h2>
+        <p>
+          If you asked me to define what "retro" means I couldn't do it.
+          It's one of those "you know it when you see it" things. Because of that,
+          I headed to the trusty Google Image search to look for instpiration.
+        </p>
+        <aside class="devgoogle shadow">
+          <a href="https://www.google.com/#q=retro+map" target="_blank" id="#DG">
+          <button type="button" name="button" class="dg">#devgoogle</button></a>
+          <code>retro map</code>
+        </aside>
+        <p>
+          This was a very fruitful search term.
+        </p>
+        <img src="retro_map_g_img.png" alt="google image results"
+        class="img-responsive img-centered" />
+        <p class='center'>
+          <i>A representative sample of "retro maps"</i>
+        </p>
+        <h2>One Map Stood Out</h2>
+        <p>
+          Throughout my various searching and struggling to find a visual inspiration
+          for the map, one map turned up that really captured my imagination.
+        </p>
+
+        <img src="palm springs modern map.jpg" alt="palm springs retro map"
+        class="img-responsive img-centered shadow" />
+        <p>
+          <i>Source: <a href="http://natreed.com" target="_blank" id="natreed">Nat Reed</a></i>
+        </p>
+        <p>
+          The colors on this map were awesome and exactly what I was looking for!
+        </p>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <h1>The Colors</h1>
+        <h2>So vibrant</h2>
+        <div class="row">
+          <div class="col-xs-1"></div>
+          <div class="col-xs-2 water colors"></div>
+          <div class="col-xs-2 tan colors"></div>
+          <div class="col-xs-2 HI colors"></div>
+          <div class="col-xs-2 AK colors"></div>
+          <div class="col-xs-1"></div>
+        </div>
+        <div class="row">
+          <div class="col-xs-1"></div>
+          <div class="col-xs-2 red colors"></div>
+          <div class="col-xs-2 purple colors"></div>
+          <div class="col-xs-2 orange colors"></div>
+          <div class="col-xs-2 green colors"></div>
+          <div class="col-xs-1"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="orange" style="color: #333">
+      <div class="container">
+        <h1>The Design</h1>
+        <h2>Build from the ground up</h2>
+        <p>
+          Initially I wasn't sure how I was going to style the reservations, so I began
+          by using the colors to build a subtle, retro background map. At the same time
+          I wanted to utilize some of the cool cartographic features of
+          <a href="http://qgis.com" target="_blank" id="qgis">QGIS</a> which
+          I had never used for cartographic design before.
+        </p>
+        <h3>Borders</h3>
+        <p>
+          In searching the David Rumsey map collection for stylistic inspiration
+          I kept running into an outlined border gradient style. I thought that would make
+          a nice and unique style for the background so I set out to replicate it in QGIS.
+        <img src="borders.png" alt="state borders" class="img-responsive img-centered shadow"/>
+        </p>
+        <p class="center">
+          <i><a href="http://www.davidrumsey.com/luna/servlet/detail/RUMSEY~8~1~254739~5519491:Map-Of-The-State-Of-North-Dakota-?sort=pub_list_no_initialsort%2Cpub_date%2Cpub_list_no%2Cseries_no"
+            target="_blank" id="rumsey1">Source: David Rumsey Map Collection
+          </a></i>
+        </p>
+        <p>
+          In QGIS this was fairly simple thanks to the lovely Shapeburst graphic style as shown.
+        <img src="shapeburst.png" alt="shapeburst" class="img-responsive img-centered shadow" />
+        </p>
+        <p>
+          <strong>The 4-Color Theorem</strong>
+        </p>
+        <p>
+          Using that style was easy enough, but I wanted there to be some variation between
+          state borders. For that, I turned to the <a href="https://en.wikipedia.org/wiki/Four_color_theorem"
+          target="_blank" id="4color">Four Color Theorem.</a>
+        </p>
+          <img src="https://upload.wikimedia.org/wikipedia/commons/4/4a/World_map_with_four_colours.svg"
+          alt="four color theorem world map" class='img-responsive img-centered shadow'/>
+        <p class="center">
+          <i>Source: Wikipedia</i>
+        </p>
+        <p>
+          Thanks to the <a href="https://plugins.qgis.org" target="_blank" id="qgisplugins">
+            exhaustive plugins library</a>, it's easy to extend QGIS' functionality.
+            For help automatically processing the four-color theorem I turned to <thead>
+              <a href="https://github.com/nyalldawson/topocolour" target="_blank" id="topocolour">
+              topocolour plugin.</a> Strangely, QGIS threw a script error,
+              but it worked nonetheless! Now I had one of 5 unique color values for
+              each state border.
+        </p>
+        <p><strong>Blending Modes</strong></p>
+        <p>
+          For the borders I wanted colors that were complimentary to the existing
+          color scheme, but I knew that the bold colors I chose above would look
+          best as the reservations areas. To save myself the trouble of coming up
+          with five more colors in the same theme, I used another one of QGIS'
+          awesome tools - blending modes.
+        </p>
+        <p>
+          Blending modes is a special rendering type where pixels in one layer are
+          mixed together through the settings <a href="https://docs.qgis.org/2.8/en/docs/user_manual/working_with_vector/vector_properties.html#layer-rendering"
+          target="_blank" id="blending">described here.</a>
+        </p>
+        <p>
+          <img src="blending.gif" alt="blending modes gif" class="img-responsive img-centered shadow" />
+        </p>
+        <p>
+          I used the blending mode <strong>Soft Light</strong>, which combines the
+          <em>Burn</em> - causing the underlying pixels to darken, and <em>Dodge</em>
+          - brightening and saturating the underlying pixels. The great part of this
+          in the end is that for the state outlines I pick a set of typical colors...
+        </p>
+        <div class="row">
+          <div class="col-xs-2 colors" style="background-color:red;"></div>
+          <div class="col-xs-2 colors" style="background-color:green;"></div>
+          <div class="col-xs-2 colors" style="background-color:blue;"></div>
+          <div class="col-xs-2 colors" style="background-color:purple;"></div>
+          <div class="col-xs-2 colors" style="background-color:orange;"></div>
+        </div>
+        <p>
+          ...and end up with a beautiful, subtle, retro color scheme.
+        </p>
+        <p>
+          <img src="soft-light.png" alt="soft light" class="img-responsive img-centered shadow" />
+        </p>
+        <h3>The Fonts</h3>
+        <p>
+          Another major component of a maps style is the font choice. I wanted
+          to give this map a distinctive look, but I wasn't sure which fonts were
+          retro and which were modern. I turned to trusty Google.
+        </p>
+        <aside class="devgoogle shadow">
+          <a href="https://www.google.com/#q=retro+fonts" target="_blank" id="#DG">
+          <button type="button" name="button" class="dg">#devgoogle</button></a>
+          <code>retro fonts</code>
+        </aside>
+        <p>
+          The restuls were a lot of script fonts, and lots of "distressed" fonts with
+          faux degredation. I was looking for a "crisper" design, so I overlooked those
+          results.
+        </p>
+        <img src="retrofonts.png" alt="retro fonts" class='img-responsive img-centered shadow' />
+        <p class="center">
+          <i>Lots of nice looking fonts.</i>
+        </p>
+        <p>
+          The first typeface that caught my eye was
+           was <a href="http://www.losttype.com/font/?name=muncie" id="muncie" target="_blank">Muncie.</a>
+          However it ended up being a difficult font to work into the design. I briefly tried similar fonts
+          like <a href="https://www.theleagueofmoveabletype.com/league-gothic" id='league' target="_blank">League Gothic</a>
+          but felt that as a label the tall, narrow design wasn't as readable. From there I turned to Google Fonts.
+        </p>
+        <p>
+          <strong>Google Fonts</strong> <br>
+          My favorite source to turn to for fonts is the ever-growing Google Fonts library.
+          They provide an insane variety of free fonts that you can easily use in websites
+          or designs. I scrolled through the list looking for fonts that were similar to
+          the ones in the Google search above. In the end I settled on the following typefaces:
+        </p>
+        <p>
+          <ul>
+            <li><strong><a href="https://www.google.com/fonts/specimen/Montserrat" id="Montserrat" target="_blank">Montserrat</a></strong></li>
+            <ul>
+              <li><i>"The old posters and signs in the traditional neighborhood of Buenos Aires called Montserrat inspired me to design a typeface that rescues the beauty of urban typography from the first half of the twentieth century.""</i></li>
+            </ul>
+            <li><strong><a href="https://www.google.com/fonts/specimen/Merriweather" id="merriweather" target="_blank">Merriweather</a></strong></li>
+            <ul>
+              <li><i>"Merriweather was designed to be a text face that is pleasant to read on screens.""</i></li>
+            </ul>
+            <li><strong><a href="https://www.google.com/fonts/specimen/Quicksand">Quicksand</a></strong></li>
+            <ul>
+              <li><i>A geometric sans-serif display font.</i></li>
+            </ul>
+          </ul>
+        </p>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+          <h1>The challenge</h1>
+          <h2>Stylistic reservations</h2>
+          <p>
+            After completing the background styles it was time to symbolize and label
+            the reservations themselves. Cartographically, this was actually surprisingly difficult.
+            Here are the issues I ran into.
+            <br>
+            <strong>The reservations...</strong><br>
+          </p>
+            <ol>
+              <li><strong>Varied wildly in size</strong></li>
+            </ol>
+          <p>
+            From the massive Navajo reservation in New Mexico and Arizona...
+            <img src="navajo.png" alt="navajo" class="img-responsive img-centered shadow" />
+            <i>Scale: 1:2,000,000  <small>(Background map courtesy <a href="http://maps.stamen.com" id="stamen" target="_blank">Stamen</a>)</small></i><br>
+            ...to the tiny Hassanamisco (state) Reservation outside of Worcester, MA <br>
+            <img src="Hassanamisco.png" alt="seminole" class="img-responsive img-centered shadow" />
+            <i>Scale: 1:10,000 <small>(Background map courtesy <a href="http://maps.stamen.com" id="stamen" target="_blank">Stamen</a>)</small></i>
+          </p>
+          <ol start="2">
+            <li><strong>Were heavily clustered</strong></li>
+          </ol>
+          <p>
+            Let's look at a segment of the official US Census map from the beginning:<br>
+            <img src="cluster.png" alt="SoCal reservation cluster" class="img-responsive img-centered shadow" />
+            I can tell you from looking that those labels were <i>hand-placed.</i>
+          </p>
+          <ol start="3">
+            <li><strong>Had both long and short names</strong></li>
+          </ol>
+          <p>
+            Oklahoma had the <strong>Kiowa-Comanche-Apache-Ft Sill-Apache/Caddo-Wichita-Delaware</strong>,
+            (that's the <i>full</i> name!) to the <strong>Zia</strong> in Arizona. This meant that labeling
+            had to be flexible and contain enough rules so that both long name and short name
+            reservations showed up.
+          </p>
+          <p>
+            Looking at the Navajo map again, we see a few other difficulties:
+            <ul>
+              <li>The features are <i>multi-part</i>, meaning that one element on the map
+                has multiple pieces. This makes labeling the reservations more difficult because
+                you have to craft label placement rules that prevent repeated labels.
+              </li>
+              <li>There are <i>overlapping</i> reservations. The purple cutout from the
+                Navajo reservation is a Hopi reservation. This will also present labeling
+                difficulties as well.
+              </li>
+              <li>
+                Looking closer at the data, nearly every tribe has both a <i>reservation</i>
+                <strong>and</strong> an <i>off-reservation land trust</i>. This is yet another
+                challenge for labeling.
+              </li>
+            </ul>
+          </p>
+      </div>
+      </section>
+
+    <section class="green">
+      <div class="container">
+        <h1>Artistic Decisions</h1>
+        <h2>Style <i>and</i> Substance?</h2>
+        <p>
+          <strong>The Style</strong><br>
+          After some experimenting, I decided to try to give the reservations and pseudo-3D appearance
+          using QGIS' brilliant styling options. I started with a darker shape offset 1px on
+          both the X and Y axis. Then I added an extra-thick border so that all the
+          very small reservations would show up. Then I capped it off with the color
+          picked from the inspirational map above.
+        </p>
+        <img src="reservation.png" alt="reservation style" class='img-responsive img-centered shadow' />
+        <p>
+          <strong>The Labels</strong><br>
+          The labels presented a serious conundrum. As a geographer I wanted to be sure
+          that every element on the map received equal representation. As an American I
+          didn't want to inadvertently disrespect any native tribes. As a layperson on Native affairs I didn't
+          want the map's recipient to call out any errors on the map. As an entrepreneur
+          I couldn't afford to spend the hours and hours it would take to get every label placed perfectly.
+          But as a cartographer I wanted my map to do it's job - show Native American
+          reservations in a cool artistic way.<br>
+          <strong>What to do?</strong>
+        </p>
+        <h3>Map as Art</h3>
+        <p>
+          In the end, I decided that my first principle would be <em>legibility.</em> Since this
+          would be a 24"x36" framed canvas, I wanted the reservation names to be visible from 5'-6' away.
+          That meant a large display font. I went with 15pt Montserrat with a 1.5mm halo and a 1.5mm shadow.
+          This created enough visual hierarchy to separate the label from the background and
+          make it legible enough at long distances.
+        </p>
+        <img src="reservation-labels.png" alt="reservation style" class='img-responsive img-centered shadow' />
+        <p>
+          With legibility as a guide I setup the rest of the labeling rules so that as many
+          labels as possible were placed without sacrificing readability. I spent a
+          good deal of time trying to get this right. In the end I was fairly satisfied
+          with the tradeoff between accuracy and style.
+        </p>
+
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <h1>A Satisfied Customer</h1>
+        <img src="miles_ken.jpg" alt="miles" class="img-responsive img-centered shadow" />
+      </div>
+    </section>
+
+    <section class="orange">
+      <div class="container" style="color:#ebdcbf">
+        <h1 id="download">Free download</h1>
+        <p>
+          I'm <i>happy</i> to share this <em>strikingly retro</em> map with you
+          completely hassle free!
+          Below is a <strong>5K,</strong> high definition version for you
+          to download! Just click the image below to get the 5K jpg for your personal use.
+          It's perfect for all your desktop wallpaper needs.
+        </p>
+      </div>
+    </section>
+
+    <section class="green">
+      <div class="container">
+        <h1>But wait, there's more!</h1>
+        <h2>For the first time ever</h2>
+        <h3>I'm making a limited number of prints available.</h3>
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-6">
+              <a href="https://gum.co/nativeposter" class='prints' id="buy">
+                <p class="center">Poster <br><small><i>From $47</i></small></p>
+                <img src="reservations_mockup_poster.jpg"
+                alt="poster mockup" class="img-responsive shadow" />
+              </a>
+            </div>
+            <div class="col-sm-6">
+              <a href="https://gum.co/nativeframed" class='prints' id="buy">
+                <p class="center">Framed Poster <br><small><i>From $79</i></small></p>
+                <img src="reservations_mockup_poster_framed.jpg"
+                alt="framed poster mockup" class='img-responsive shadow' />
+              </a>
+            </div>
+          </div>
+          <br>
+          <div class="row">
+            <div class="col-sm-3"></div>
+            <div class="col-sm-6">
+              <a href="https://gum.co/nativecanvas" class='prints' id="buy">
+                <p class="center">Gallery Canvas <br><small><i>From $80</i></small></p>
+                <img src="reservations_mockup_canvas.jpg"
+                alt="canvas mockup" class="img-responsive shadow" />
+              </a>
+            </div>
+            <div class="col-sm-3"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <h1>Download the wallpaper</h1>
+        <p>
+          Are you sure you don't want a print?
+        </p>
+        <p>
+          No?
+        </p>
+        <p>
+          That's ok, we're still friends. Enjoy your wallpaper!
+        </p>
+        <a href="reservations_poster_final-5k.jpg" target="_blank">
+        <img src="reservations_poster_final-bg.jpg" alt="native thumb 730px" class="img-responsive img-center" /></a>
+
+        <p style="text-align: center;">
+          <i>&copy; Mapsmith 2015</i>
+        </p>
+      </div>
+    </section>
+
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-45708379-5', 'auto');
+      ga('require', 'linkid', 'linkid.js');
+      ga('send', 'pageview');
+
+    </script>
+
+    <!-- jQuery -->
+    <script src="../js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="../js/bootstrap.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+    <script src="../js/classie.js"></script>
+    <script src="../js/cbpAnimatedHeader.js"></script>
+
+    <!-- Contact Form JavaScript -->
+    <script src="../js/jqBootstrapValidation.js"></script>
+    <script src="../js/contact_me.js"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script src="../js/agency.js"></script>
+</body>
+
+</html>
