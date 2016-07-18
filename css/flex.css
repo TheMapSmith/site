@@ -13,7 +13,6 @@
 #golf           { order: 8 }
 #graffiti       { order: 9 }
 #bootstrap      { order: 10}
-
 /*colors
 http://www.palettable.io/303545-F2EAD9-72DFDB-03A89E-F88A50*/
 
@@ -259,14 +258,15 @@ p {
 .buyme {
   display: none;
 }
+@media only screen and (min-width: 450px) {
+  .title h1 {
+    font-size: 2.5em;
+  }
+}
 
 /*Landscape phones, phablets, portrait iPads*/
 
-@media only screen and (min-width: 480px) and (max-width: 767px) {
-  .flex-title h1 {
-    font-size: 3em;
-  }
-}
+@media only screen and (min-width: 480px) and (max-width: 769px) {}
 
 /*set legend to row at this level*/
 
@@ -276,6 +276,9 @@ p {
   }
   #logo {
     max-height: 512px;
+  }
+  .title h1 {
+    font-size: 2.5em;
   }
 }
 
