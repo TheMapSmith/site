@@ -1,0 +1,167 @@
+html, body {
+    height: 100%;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #444;
+}
+
+/* bootstrap mods */
+
+.fill {
+    min-height: 100%;
+    height: 100%;
+    padding: 15px;
+    min-width: 360px;
+}
+
+.minifill {
+    height: 200px;
+    min-width: 360px;
+    padding: 15px;
+}
+
+
+@media (min-width: 768px) {
+  .minifill {
+      height: 350px;
+      min-width: 360px;
+      padding: 15px;
+  }
+
+}
+
+.row {
+  height: inherit;
+}
+
+.col-xs-1, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .col-xs-11, .col-xs-12 {
+  min-height: 100%;
+  height: 100%;
+}
+
+.col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12 {
+  min-height: 100%;
+  height: 100%;
+}
+
+
+/* end bootstrap mods */
+
+
+/* begin custom styles */
+
+
+.row1 {
+  height: 8.39%;
+  min-height: 8.39%;
+}
+
+.row2, .row6, .row13, .row17 {
+  height: 1.75%;
+  min-height: 1.75%;
+}
+
+.row3 {
+  height: 5.59%;
+  min-height: 5.59%;
+}
+
+.row4, .row19 {
+  height: 3.5%;
+  min-height: 3.5%;
+}
+
+.row5 {
+  height: 7.69%;
+  min-height: 7.69%;
+}
+
+.row7, .row8 {
+  height: 2.1%;
+  min-height: 2.1%;
+}
+
+.row9, .row10 {
+  height: 4.9%;
+  min-height: 4.9%;
+}
+
+.row11 {
+  height: 5.24%;
+  min-height: 5.24%;
+}
+
+.row12 {
+  height: 6.29%;
+  min-height: 6.29%;
+}
+
+.row12a {
+}
+
+.row14 {
+  height: 6.64%;
+  min-height: 6.64%;
+}
+
+.row15 {
+  height: 4.55%;
+  min-height: 4.55%;
+}
+
+.row16 {
+  height: 3.15%;
+  min-height: 3.15%;
+}
+
+.row18 {
+  height: 4.55%;
+  min-height: 4.55%;
+}
+
+.row20 {
+  height: 4.2%;
+  min-height: 4.2%;
+}
+
+.row21 {
+  height: 15.71%;
+  min-height: 15.71%;
+}
+
+.map {
+    width: 100%;
+    height: 100%;
+    min-height: 100%;
+    display: block;
+}
+
+.color1 {
+    background-color: #f0ad4e;
+}
+
+.color2 {
+    background-color: #337ab7;
+}
+
+.color3 {
+    background-color: #5cb85c;
+}
+
+.color4 {
+    background-color: #d9534f;
+}
+
+
+.pullout {
+  font-size: 2em;
+  padding: 50px;
+  text-align: center;
+  font-weight: 500;
+
+}
+
+.img-responsive {
+  margin: 0 auto;
+  width: 100%;
+}

@@ -1,0 +1,936 @@
+<!doctype html>
+<head>
+	<title>Mapbox Studio Cartography</title>
+
+	<meta name="viewport" content="width=device-width" />
+	<meta http-equiv='content-type' content='text/html; charset=utf-8' />
+  <meta name='description' content='A deep dive into cartographic design using the new Mapbox Studio' />
+  <meta name="viewport" content="initial-scale=1.0 maximum-scale=1.0">
+
+  <meta name='author' content='Stephen Smith' />
+  <meta property="og:site_name" content="mapsmith.net"/>
+  <meta property="og:email" content="stephen@mapsmith.net"/>
+  <meta property="og:type" content="article" />
+
+	<link rel="stylesheet" type="text/css" href="../css/mbs-grid.css" media="all" />
+	<link rel="stylesheet" type="text/css" href="../css/mbs.css" media="all" />
+	<!-- <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'> -->
+	<link href="../fonts/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+
+
+	<nav class="navbar navbar-brand">
+		<a href="http://www.mapsmith.net" target="_blank" class="navbar-brand">Mapsmith</a>
+	</nav>
+
+	<header role="banner">
+		<div class="container">
+			<h1 class="headline"><span id="mapbox">Mapbox Studio</span> Cartography</h1>
+		</div>
+	</header>
+
+<div class="container">
+			<div class="byline">
+				<p class="align-left">by <a href="http://mapsmith.net">Stephen Smith</a></p>
+				<p class="align-right"><small><em>Wednesday, October 7, 2015</em></small></p>
+				<div class="clearfix"></div>
+			</div>
+	<main role="main">
+		<p class="intro">
+			I've been playing around with the <em>newest version</em> of
+			<a href="http://www.mapbox.com/studio" id="mapbox" target="_blank">Mapbox Studio</a>
+			for a couple of weeks as part of the <a href="https://www.mapbox.com/mapbox-studio/#start-designing" target="_blank">private beta</a>.
+			I've attempted to put the tool through its paces, to push the
+			cartographic envelope, and now I want to share my thoughts and
+			experiences with you.
+		</p>
+		<p>
+			In this post, we'll:
+			<ol>
+				<li>Discuss the history of global mapping.</li>
+				<li>Talk about what's new in the latest version of <span id="mapbox">Mapbox Studio</span> </li>
+				<li>Go through the first steps in detail to designing a striking map.</li>
+				<li>Wrap up with a discussion of the cartographic challenge of designing a global web map.</li>
+			</ol>
+		</p>
+
+		<h3>What is <span id="mapbox">Mapbox Studio?</span></h3>
+
+			<blockquote>
+				<p><em>
+					<span id="mapbox">Mapbox Studio</span> is a web-based mapping application
+					that allows you to quickly style a map of the entire world.
+				</em></p>
+			</blockquote>
+
+		<h3>Let's unpack that</h3>
+		<p>
+			That statement is actually pretty freaking amazing, and I don't want you to
+			take it for granted. Simply put, this tool is unique in that it was
+			<strong>literally impossible</strong> to achieve <em>not that long ago</em>.
+		</p>
+		<p>
+			When desktop GIS first became <em>a thing</em>, it would have been nearly impossible to have
+			enough computing power and storage space to make such a detailed map of the world.
+			Let alone the fact that a worldwide, digital, street-level dataset probably only existed
+			in the halls of the world intelligence agencies.
+		</p>
+		<p>
+			Think about how crazy it was in 1996 when Mapquest launched. It was a
+			<em>revolution</em> that you could use the internet to find directions between
+			any two places on the planet. Prior to this, it was the sole domain of the
+			super-powerful internet companies.
+		</p>
+		<p>
+			When Steve Coast founded OpenStreetMap in 2005, we started to see the first
+			hints of a readily accessible, open, world basemap. Still, not many people had the computing
+			power, bandwith, and expertise to <em>consume</em> such a massive data source.
+		</p>
+		<p>
+			In 2010, <a href="https://developmentseed.org/about/who-we-are/" target="_blank">DevelopmentSeed</a>
+			 - the company that eventually spawned <span id="mapbox">Mapbox</span> -
+			began development of an open source cartography tool which would allow you to
+			easily style and deploy a web map. It was called <strong>Tilemill</strong> for the way it allowed you
+			to convert your data into a tiled map easily consumable on the web. It was a
+			refreshing change of pace to expensive GIS or illustration programs for map design,
+			but the data aspect was still as challenging as ever.
+		</p>
+		<p>
+			The second cartographic tool was initially called <strong>Tilemill 2</strong> during
+			development and has now been dubbed
+			<span id="mapbox">Mapbox Studio Classic.</span> Like Tilemill, it used <code>CartoCSS</code>
+			hand-typed into an interactive code window. What made this a great step forward
+			for developing a global basemap was the inclusion of a curated, open data
+			source updated regularly. Without having to download and process OpenStreetMap
+			you could style roads and rivers and buildings all over the world effortlessly.
+		</p>
+
+		<strong>What's new?</strong>
+		<p>
+			They've been teasing the next release of <span id="mapbox">Mapbox Studio</span>
+			with Tweets of screenshots for a while now, but on July 29th, 2015 they finally made
+			it official on <a href="https://www.mapbox.com/blog/designing-a-map-with-mapbox-studio/" target="_blank">their blog</a>.
+			The main selling point is that the newest version...
+		</p>
+		<blockquote cite="https://www.mapbox.com/blog/designing-a-map-with-mapbox-studio/">
+			<em>will do away with code-based styling and introduce a totally visual interface.</em>
+		</blockquote>
+		<p>
+			With the transition to a new interface, the entire underlying styling language changed as well.
+			<code><a href="https://www.mapbox.com/mapbox-gl-style-spec/">Mapbox GL</a></code> is a new, open source,
+			<code>JSON</code>-based language specification that combines data source and style definitions in one neat package.
+			In addition to the language change, the coding is gone too. Now a slick user interface helps
+			you design your map.
+		</p>
+		<p>
+			Now, the <em>entire workflow</em> for making your own, customized
+			map of the entire world is:
+			<ol>
+				<li>Create an account</li>
+				<li>Log in</li>
+				<li>Launch <span id="mapbox">Mapbox Studio</span></li>
+				<li>Map</li>
+			</ol>
+		</p>
+		<p>
+			With this perspective in mind, let's make a map.
+		</p>
+
+		<h3>The Goal:</h3>
+		<h4>
+				Develop a map inspired by neon signs.
+		</h4>
+		<img src="img/mellow-mushroom.jpg" alt="" class="shadow"/>
+		<div class="caption">
+			Image courtsey of Courtney Designs
+		</div>
+			<!-- TODO: Find a way to <hide> this segment -->
+			<!-- To understand <strong>how</strong> amazing the above
+			statement is, we'll have to go waaaay back.
+			<em>Let's start at the beginning.</em>
+		</p>
+
+		<h4>
+			In the beginning...
+		</h4>
+		<p>
+			In humankind's cave-dwelling days, when maps weren't even <em>a thing</em>,
+			 <strong>this was impossible.</strong>
+		</p>
+
+		<h4>When we formed tribes...</h4>
+		<p>
+			We needed maps to know where to hunt and where the next village was, but
+			a <em>world</em> maps was <strong>impossible.</strong>
+		</p>
+
+		<h4>When we started farming...</h4>
+		<p>
+			We needed maps for our farms and our towns, but a world map was still
+			<strong>impossible.</strong>
+		</p>
+
+		<h4>When the first cities formed...</h4>
+		<p>
+			We could make maps of our region, but going much further than that was
+			still <strong>impossible.</strong>
+		</p>
+
+		<h4>When we conquered the seas...</h4>
+		<p>
+			Here's where we start getting closer. When explorers needed to get from Lisbon
+			to Naples, they needed <em>charts</em> of a much larger area. Now we're getting
+			<em>closer,</em> but think about what's needed to make a map of the
+			Mediterranean. You need a fleet of ships, tons of crew, months of supplies,
+			and lots of math. Basically, this was <strong>still impossible.</strong>
+		</p>
+
+		<h4>When Columbus sailed the ocean blue...</h4>
+		<p>
+			Getting closer still. As a civilization we're starting to get a
+			<em>rough</em> idea of what's out there, but we still wouldn't get a
+			<em>complete</em> picture for quite some time. Let's dub the possibility in
+			1492 as <strong>extremely difficult</strong>, but not impossible any more.
+		</p>
+
+		<h4>When the sun never set on the British empire...</h4>
+		<p>
+			If you rule most of the world, you probably want to know <em>what exactly</em>
+			you're ruling, so you put quite a bit of effort into mapping it. So, with
+			the might of the entire British empire, you can now reasonably create a
+			map of the entire world.
+		</p>
+
+		<h4>When planes were used for reconaissance...</h4>
+		<p>
+			Now we're getting an even better picture of our world, but you still need
+			to be a government cartographer with specialized equipment to come close.
+		</p>
+
+		<h4>When we launched the first satellites...</h4>
+		<p>
+			Even closer, but the quantity and quality of the data, along with the
+			specialized mapmaking tools, are reserved for the very few.
+		</p>
+
+		<h4>When OpenStreetMap was founded...</h4>
+		<p>
+			Now we get to the first place where <em>everyday</em> cartographers can
+			get access to a dataset covering the <strong>entire world</strong> (eventually),
+			but you have to have a very powerful machine and have a high technical
+			proficciency to download, unpack, process, and store <code>planet.osm</code>.
+		</p>
+
+		<h4>When <span id="mapbox">Mapbox</span> creates OSM vector tiles...</h4>
+		<p>
+			Finally, we've arrived at <strong>possible.</strong>
+		</p> -->
+
+		<!-- <ul>
+			<li>Web-based application</li>
+		</ul>
+		<p>
+			The first few cartography tools that <span id="mapbox">Mapbox</span> created
+			were cross-platform, open-source <em>desktop</em> applications.
+		</p>
+
+		and their amazing
+		<a href="http://www.osm.org" target="_blank">OpenStreetMap</a>
+		data and
+
+		using <span id="mapbox">Mapbox's</span>
+		<code>JSON</code>-based graphics styling language -->
+
+		<h2>Making a map</h2>
+		<p>
+			<small>
+			<em>(Note: These screenshots were taken during the beta and may vary slightly from the current version.)</em>
+			</small> <br>
+			It's pretty simple to get started. Hit the <strong>New Style</strong> button.
+			This presents you with a list of pre-designed styles for your inspiration.
+			For this map we'll start from scratch. Scroll down and select the <em>Empty</em>
+			template and click <strong>Create.</strong>
+		</p>
+		<img src="img/new_style.jpeg" alt="" class="shadow"/>
+		<div class="caption">
+			The "New Style" screen. Choose an preset design to modify or start from scratch.
+		</div>
+
+		<h3>The blank source</h3>
+		<p>
+			It can be rather daunting to start from the ground up, but if you're wanting
+			to really make something unique, I think it's a must.
+		</p>
+		<img src="img/blank.jpeg" alt="" class="shadow"/>
+		<div class="caption">
+			A blank style. Table of contents on left, map area on right (currently blank).
+		</div>
+		<p>
+			This doesn't look too dissimilar from a traditional GIS program. You launch it,
+			and it sits there - empty - waiting for your data.
+		</p>
+
+		<h3>Selecting data</h3>
+		<p>
+			Thankfully <small><em>(and miraculously, as mentioned previously)</em></small>,
+			<span id="mapbox">Mapbox</span> has provided the data for the
+			<strong>entire world</strong> for you to style (courtesy of OpenStreetMap).
+		</p>
+		<p>
+			Start by opening the "New Layer" pane. This changes the map view from "Cartography"
+			to "X-Ray" mode, allowing you to see all the data behind the scenes.
+		</p>
+		<img src="img/add_data.jpeg" alt="" class="shadow"/>
+		<div class="caption">
+			"X-Ray" mode - see all the raw data hiding behind the map. It's interactive so you
+			can click to pick your new layer.
+		</div>
+		<p>
+			You get a preview of the depth and breadth of information available at your fingertips.
+			Click anywhere in the ocean to select the <code>water</code> data and then hit "Select."
+		</p>
+		<div class="centered">
+			<img src="img/select.jpeg" alt="" class="shadow"/>
+			<div class="caption">
+				Click on an area of water to choose that data source for a new layer.
+			</div>
+		</div>
+		<p>
+			Once a layer has been selected, the data is highlighted in the map. This will
+			be especially helpful later when filters are required.
+		</p>
+		<img src="img/selected.jpeg" alt="" class="shadow"/>
+		<div class="caption">
+			Once you select the <code>water</code> layer it becomes highlighted on the map
+				and the rest of the data gets greyed out.
+			</map>
+		</div>
+		<p>
+			Go ahead and press "Create Layer" and the map switches back to Style mode.
+		</p>
+
+		<h3>Styling data</h3>
+		<p>
+			Now we get our first look at the map styling tools. Also, we can breathe
+			a slight sigh of relief that our map is no longer blank.
+		</p>
+		<img src="img/style1.jpeg" alt="" class="shadow"/>
+		<div class="caption">
+			You can have whatever default color you want, as long as it's black.
+		</div>
+		<p>
+			Let's see what we have to work with.
+		</p>
+		<img src="img/polygon_tools.jpeg" alt="" class="shadow"/>
+		<div class="caption">
+			Polygon styling tools.
+		</div>
+		<p>
+			Let's break down our toolbox.
+			<ul>
+				<li>Color picker</li>
+				<ul>
+					<li><img src="img/colorpicker.jpeg" alt="" class="shadow"/></li>
+					<div class="caption">
+						RGBA and HSVA modes available.
+					</div>
+				</ul>
+				<li>Pattern Picker</li>
+				<ul>
+					<li><img src="img/patternpicker.jpeg" alt="" class="shadow"/></li>
+					<div class="caption">
+						Symbols used for POI and icon fills.
+					</div>
+				</ul>
+				<li>Opacity Slider</li>
+				<ul>
+					<li><img src="img/opacityslider.jpeg" alt="" class="shadow"/></li>
+					<div class="caption">
+						From 0 (fully transparent) to 1 (fully opaque).
+					</div>
+				</ul>
+				<li>Antialias Toggle</li>
+				<ul>
+					<li><img src="img/antialias.jpeg" alt="" class="shadow"/></li>
+					<div class="caption">
+						Antialias in this context is a 1px outline of a polygon. When you hover
+						over a style tool in the application it shows you a handy descriptive popup.
+					</div>
+				</ul>
+				<li>Antialias Color Picker</li>
+				<ul>
+					<li><img src="img/antialias_color.jpeg" alt="" class="shadow"/></li>
+					<div class="caption">
+						Same color picker as above, except for the antialias color.
+					</div>
+				</ul>
+				<li>Translation Settings</li>
+				<ul>
+					<li><img src="img/translate.jpeg" alt="" class="shadow"/></li>
+					<div class="caption">
+						If you want to have your style visually translated from it's location.
+					</div>
+				</ul>
+			</ul>
+		</p>
+
+		<p>
+			That's a pretty standard set of tools, not a lot of mind-blowing stuff in the
+			polygon styling toolbelt...
+		</p>
+		<p>
+			Oh, except did I mention...? Everything you do <strong>changes live?</strong>
+		</p>
+		<p>
+			Click on the GIF below to check out the color picker in action.
+		</p>
+		<div class="centered">
+			<img src="img/colorpicker.jpg" alt="" class="shadow"/><br>
+			<small><em><a href="img/colorpicker-sm.gif" target="_blank">Click for GIF</a></em></small>
+		</div>
+		<p>
+			The live updating ocean color is made possible by the amazing technology <span id="mapbox">Mapbox</span> uses
+			to render the map in your browser. Basically, it uses your graphics card to <em>continuously</em>
+			render the map at 60 frames per second. This allows for
+			the cartographer to get instant feedback on their design. For more information about the
+			underlying technology, head over to the
+			<a href="https://www.mapbox.com/blog/mapbox-gl/" target="_blank"><span id="mapbox">Mapbox</span> blog.</a>
+		</p>
+
+		<h3>Building the Style</h3>
+		<p>
+			Let's start building the map. We've got the water layer added to our map, let's set the color.
+		</p>
+		<h4>Water</h4>
+		<p>
+			Use the color picker to set the fill color to <code>#246</code>.
+		</p>
+		<h4>Land</h4>
+		<p>
+			One important thing to note when creating your map is that of your underlying
+			background data layers (water and land), only the <strong>water</strong>
+			is actual data. You style the land by styling the
+			<em>background</em> of the map (i.e. the absence of water).
+			To add color to the land, click the Background layer and set it to color
+			<code>#1F1A1D</code>.
+		</p>
+		<img src="img/background.jpeg" alt="" class="shadow" />
+		<div class="caption">
+			To add color to the land, click the Background layer and select a color.
+		</div>
+
+		<h4>Countries</h4>
+		<p>
+			Let's add the country boundaries. This will give us a chance to highlight
+			the built-in query tools. Create a new layer, click Select a Dataset, and then select the
+			<code>admin</code> layer from the list.
+		</p>
+		<img src="img/add-admin.jpg" alt="" class="shadow" />
+		<div class="caption">
+			You can directly select on the map the data you want to style, or you can
+			select from the list of datasets.
+		</div>
+		<p>
+			When you select the <code>admin</code> layer, you get the entire unfiltered
+			dataset. I want to style only the land country boundaries, so I click the
+			<code>add filter</code> button towards the bottom of the pane to see what attributes can be queried.
+		</p>
+		<img src="img/admin-filter.gif" alt="" class="shadow"/>
+		<div class="caption">
+			Querying the data using the interactive filter tool.
+		</div>
+		<p>
+			Use the following settings to query out only the level 2, undisputed, land (non-maritime) boundaries
+			(see above animation).
+		<p>
+		<p>
+			<code>admin_level is 2</code><br>
+			<code>maritime is 0</code><br>
+			<code>disputed is 0</code>
+		</p>
+		<p>
+			Then click <strong>Create Layer.</strong> Let's look at the ways we can style lines.
+		</p>
+		<img src="img/line.jpeg" alt="" class="shadow"/>
+		<div class="caption">
+			The line styling tools.
+		</div>
+		<p>
+			This is a pretty standard set of line styling options. There are a couple
+			of options worth noting though. The <code>gap width</code> option is
+			nice for allowing you to have "casing" for your roads or
+			paths for example.
+		</p>
+		<img src="img/line-case-bright.jpeg" alt="" class="shadow" />
+		<div class="caption">
+			The white border on the highway and the slightly darker color of the roads
+			are created using the <code>gap width</code> settings.
+		</div>
+		<p>
+			This is great for road casing. It gives a slight visual separation
+			to the roads. <small> (via Mapbox Streets style)</small>
+		</p>
+		<p>
+			The <code>blur</code> setting is an interesting one that we'll check out next.
+		</p>
+		<strong>Styling</strong>
+		<p>
+			On the <code>admin</code> layer, let's give our country boundaries the following settings: <br>
+			<div class="table shadow">
+				<table align="center">
+					<tr>
+						<td><code>color:</code></td>
+						<td><code>#EF0</code></td>
+					</tr>
+					<tr>
+						<td><code>dasharray:</code></td>
+						<td><code>dash: 1,</code></td>
+						<td>
+							<code>gap: 2</code>
+						</td>
+					</tr>
+				</table>
+			</div>
+		</p>
+		<img src="img/admin2-1.jpeg" alt="" class="shadow"/>
+		<div class="caption">
+			The dashed style isn't very obvious at this scale, but you'll see it more as you zoom in.
+		</div>
+		<p>
+			That's nice, but it stays at <code> width: 1px</code> no matter how much
+			you zoom in. Let's make the line width <strong>vary with zoom level.</strong>
+		</p>
+		<strong>Styling by zoom level</strong>
+		<p>
+			Since <code>Mapbox GL</code> allows floating point zoom levels (versus integer
+			zoom levels in CartoCSS), hard-coding styles to specific zoom levels
+			doesn't make much sense any more.
+			Now a <strong>function</strong> defines the way your style changes as you zoom.
+			This allows you to very quickly setup complex rules for your styles.
+		</p>
+		<p>
+			Click the button to the <strong>far right</strong> side of the line width
+			setting to open up the <em>style by zoom level</em> dialog box.
+			<div class="centered"><img src="img/sbzl.png" alt="" /></div>
+		</p>
+		<p>
+			After it pops out, click <em>"Enable styling by zoom level."</em> <br>
+			At zoom level 0, set the line width to 0.5 px. At zoom level 22, set the line width to 10
+			as shown in the screenshot below.
+		</p>
+		<img src="img/admin2-ramp.jpeg" alt="" class="shadow"/>
+		<div class="caption">
+			Notice how the line width changes slowly and consistiently from <code>z0</code>
+			to <code>z22</code>.
+		</div>
+		<p>
+			So our yellow dashed country boundaries are nice looking, but let's
+			<strong>kick'em up a notch!</strong>.
+		</p>
+		<strong>Layering layers</strong>
+		<p>
+			My biggest complaint with migrating away from <code>CartoCSS</code> to
+			<a href="https://www.mapbox.com/mapbox-gl-style-spec/" target="_blank"><code>Mapbox GL</code></a>
+			is the fact that the same data layer can't hold multiple styles. This means that
+			for each layer style (casing, fill, glow, etc.) you'll need <em>another</em> layer.
+		</p>
+		<p>
+			For this map, that means we're ultimately going to end up with
+			<strong>over 100 layers.</strong>
+		</p>
+		<p>
+			So, let's get started.
+		</p>
+		<p>
+			Start by duplicating the existing <code>admin</code> layer with the
+			button at the top of the table of contents.
+		</p>
+		<div class="centered">
+			<img src="img/duplicate.jpeg" alt="" class="small shadow"/>
+		</div>
+		<div class="caption">
+			The Duplicate Layer button.
+		</div>
+			<p>
+			We're going to create a neon light-like glowing effect, so below the
+			bright yellow <code>#EF0</code> color we'll put a darker color. We'll
+			also make it wider and utilize the <code>blur</code> function. Edit the
+			<code>admin copy</code> layer to include the settings below.
+			</p>
+			<div class="table shadow">
+				<table align="center">
+					<tr>
+						<td><code>color:</code></td>
+						<td><code>#AB0</code></td>
+					</tr>
+					<tr>
+						<td><code>width:</code></td>
+						<td><code>
+							[0,0.5 <br>
+							22, 30]</code></td>
+					</tr>
+					<tr>
+						<td><code>blur:</code></td>
+						<td><code>
+							[0,0 <br>
+							22,17]</code></td>
+					</tr>
+					<tr>
+						<td><code>dasharray:</code></td>
+						<td><code>dash: 1,</code></td>
+						<td>
+							<code>gap: 0</code>
+						</td>
+					</tr>
+				</table>
+			</div>
+				<div class="caption">
+					Remove the <code>dasharray</code> setting by changing the <code>gap</code> to zero.
+				</div>
+			<p>
+				Since we'll eventually have <em>hundreds</em> of layers it is
+				a good practice to start setting sensible names to your layers from the start. With
+				the <code>admin copy</code> layer selected, click on the name at the top
+				and type in <code>admin-med</code>.
+			</p>
+			<div class="centered">
+				<img src="img/rename.png" alt="" class="shadow"/>
+			</div>
+			<div class="caption">
+				Rename the <code>admin copy</code> layer to something like <code>admin medium</code>
+			</div>
+			<p>
+				That will create a pretty nice effect, but we're not done yet. Let's do it one more
+				time with an even darker yellow and an even wider stroke and larger blur. Duplicate the
+				<code>admin copy</code> layer and apply the following settings.
+			</p>
+			<div class="table shadow">
+
+
+				<table align="center">
+					<tr>
+						<td><code>color:</code></td>
+						<td><code>#660</code></td>
+					</tr>
+					<tr>
+						<td><code>width:</code></td>
+						<td><code>
+							[0,5 <br>
+							10, 30]</code></td>
+					</tr>
+					<tr>
+						<td><code>blur:</code></td>
+						<td><code>
+							[0,10 <br>
+							10,20]</code></td>
+					</tr>
+				</table>
+			</div>
+			<p>
+				Notice that the zoom level scales don't have to be a consistient ramp from <code>z0</code>
+				to <code>z22</code>. In this case I ramp them up quickly so that by time
+				the user gets to <code>z10</code> the admin lines are at their widest.
+			</p>
+			<p>
+				I do this to manage the "visual importance" of the country boundaries. As you
+				get closer in and cities and highways start showing up, admin borders become
+				less important compared to roads and rivers.
+			</p>
+			<p>
+				Before we move on from the admin layers, we need to rearrange them. If you
+				followed the steps above, then your layers will probably be arranged backwards.
+				Just click and drag the layers the rearrange.
+			</p>
+			<div class="centered">
+				<img src="img/rearrange-admin.gif" alt="" class="shadow"/>
+			</div>
+			<div class="caption">
+				Rearrange the layers by clicking and dragging.
+			</div>
+			<p>
+				So our country boundaries will end up looking something like this:
+			</p>
+			<img src="img/admin-ex@3x.jpeg" alt="" class="shadow"/>
+			<div class="caption">
+				Simulated country border line style with all effects applied.
+			</div>
+			<p>
+				Now you're probably starting to piece together why there will  be over
+				100 levels. If we want a glowing effect on all the lines, then we're going
+				to have to <em>duplicate each line</em> several times.
+			</p>
+			<p>
+				So here's our world map with yellow dashed neon country borders.
+			</p>
+			<img src="img/admin2-done.jpeg" alt="" class="shadow"/>
+			<div class="caption">
+				Glowing borders at z1.
+			</div>
+			<p>
+				And here it is a little closer:
+			</p>
+			<img src="img/admin2-closeup.jpeg" alt="" class="shadow"/>
+			<div class="caption">
+				Glowing Switzerland borders.
+			</div>
+			<p>
+				Next I'm going to add admin level 4 (states) in a similar style, but purple
+				and a little thinner than the country borders.
+			</p>
+			<img src="img/admin4.jpeg" alt="" class="shadow"/>
+			<div class="caption">
+				Glowing admin level-2 boundaries (states).
+			</div>
+			<strong>Water</strong>
+			<p>
+				Those Swiss lakes look a little dull, let's make them glow!
+			</p>
+			<p>
+				Now we'll do something just a little tricky. We're going to take the
+				<code>water</code> layer - which is a polygon dataset - and add
+				it to our table of contents as a <strong>line</strong> layer.
+			</p>
+			<p>
+				In the <code>New Layer</code> view, select the <code>water</code>
+				dataset, and then at the bottom change the type from
+				<strong>fill</strong> to <strong><em>line</em></strong>.
+			</p>
+			<img src="img/water-line.jpeg" alt="" class="shadow"/>
+			<div class="caption">
+				The selected <code>water</code> layer as a <strong>line</strong> instead of a fill.
+			</div>
+			<p>
+				This new layer will automatically appear at the top of your table of
+				contents, but we don't necessarily want it there. To rearrange, simply
+				click and drag on the layer!
+			</p>
+			<div class="centered">
+				<img src="img/rearrange.gif" alt="" class="shadow"/>
+			</div>
+			<div class="caption">
+				Rearrange the layers by clicking and dragging.
+			</div>
+			<p>
+				Nice.
+			</p>
+			<img src="img/water-glow.jpeg" alt="" class="shadow"/>
+			<div class="caption">
+				Glowing water behind the glowing admin boundaries.
+			</div>
+
+			<strong>Basic Labels</strong>
+			<p>
+				Let's give our map readers some context as they're zooming in on our map
+				by adding country labels.
+			</p>
+			<p>
+				Start by creating a new layer using the <code>country_label</code>
+				layer.
+			</p>
+			<img src="img/admin-pts-new.jpeg" alt="" class="shadow"/>
+			<div class="caption">
+				Selecting the <code>country_label</code> data layer and flitering by
+				<code>type = 'country'</code>.
+			</div>
+			<p>
+				Be sure to change the type of layer at the bottom to <code>Symbol</code>.
+			</p>
+			<p>
+				<span id="mapbox">Mapbox</span> has generously teamed up with
+				<a href="https://www.fontfont.com/" target="_blank">FontFont</a> to provide
+				a very nice assortment of professional fonts for your map design pleasure.
+				Let's pick one that's angular and technical looking so that it matches
+				our neon theme. I opted to go with
+				<span id="magda">Magda Clean Mono Offc Pro Black.</span>
+			</p>
+			<p>
+				Let's style those labels.
+			</p>
+			<img src="img/country-labels.jpeg" alt="" class="shadow"/>
+			<div class="caption">
+				Labeled countries.
+			</div>
+			<p>
+				Another thing we want to do is have state labels show up at some point
+				as you zoom in. For this we'll use the <code>zoom-extent</code> setting
+				in the new layer window.
+			</p>
+			<img src="img/zoom-extent.jpeg" alt="" class="shadow"/>
+			<div class="caption">
+				Selecting the <code>state_label</code> data layer and set the min
+				<code>zoom extent</code> to 4.
+			</div>
+
+			<strong>Highways</strong>
+			<p>
+				Alright, this post is getting <em>really</em> long, so we'll skip ahead
+				to the really neat part - <strong>neon roads.</strong>
+			</p>
+			<p>
+				Start by creating a new layer using the <code>road</code> dataset with
+				a filter of <code>class = 'motorway'</code>.
+			</p>
+			<img src="img/motorway-data.jpeg" alt="" class="shadow"/>
+			<div class="caption">
+				New <code>roads</code> layer with <code>class = 'motorway'</code>.
+			</div>
+			<p>
+				To create a glowing neon effect, we're actually going to stack
+				<em>three different layers</em> of the same data using different styles.
+				Remember how we stacked up several layers to making the glowing country
+				borders earlier? We'll do the same thing here for the highways.
+			</p>
+			<p>
+				The result with look something like this.
+			</p>
+			<img src="img/hwy-glow-ex@3x.jpeg" alt="" class="shadow" />
+			<div class="caption">
+				Simulated motorway line styles.
+			</div>
+			<p>
+				Let's get started. First let's make the thin top layer. It is a thin,
+				yellowish, slightly blurry line.
+			</p>
+			<img src="img/highway-lite.jpeg" alt="" class="shadow" />
+			<div class="caption">
+				Tiny <span style="color: red">blurrred linesss</span>. <i class="fa fa-music"></i>
+			</div>
+			<p>
+				Next, duplicate the layer, make it a little orange-er, a little wider,
+				and a little blurrier.
+			</p>
+			<img src="img/highway-med.jpeg" alt="" class="shadow"/>
+			<div class="caption">
+				<i class="fa fa-music"></i> I know you want it <i class="fa fa-music"></i>
+			</div>
+			<p>
+				Next, duplicate the layer again, make it a little orange-er, a little wider,
+				and a little blurrier.
+			</p>
+			<img src="img/highway-drk.jpeg" alt="" class="shadow"/>
+			<div class="caption">
+				<i class="fa fa-music"></i> Go ahead, get at me. <i class="fa fa-music"></i>
+			</div>
+			<p>
+				Let's see how that looks as we zoom in.
+			</p>
+			<div class="centered">
+				<img src="img/highway-zoom.jpg" alt="" class="shadow"/> <br>
+				<small><em><a href="img/highway-zoom.gif" target="_blank">Click for GIF</a></em></small>
+			</div>
+			<p>
+				I've added lower level streets just for reference. Also, there are gaps
+				between different segments because the <code>road</code> dataset doesn't
+				include bridges. To get those to show up you need to duplicate the layers
+				and change the data source to the <code>bridge</code> dataset.
+			</p>
+			<h2>Explore the Final Product</h2>
+			<p>
+				Here is the completed map.
+			</p>
+			<div class="map">
+				<!-- <iframe src="http://bl.ocks.org/TheMapSmith/raw/2966bfa0af4d76c2af3a/" width="100%" height="400"></iframe> -->
+				<a href="http://bl.ocks.org/TheMapSmith/raw/2966bfa0af4d76c2af3a/" target="_blank">
+				<img src="img/world.jpg" alt="" class="shadow"/></a>
+				<div class="caption">
+				<a href="http://bl.ocks.org/TheMapSmith/raw/2966bfa0af4d76c2af3a/" target="_blank">View Fullscreen Interactive Map</a>
+				<br>
+					<em>As of 10/13/15 parts of the map are still being designed.</em>
+				</div>
+			</div>
+			<p>
+
+			</p>
+			<h2>Wrap-up</h2>
+			<p>
+				It takes a <strong>lot</strong> of work to develop a cohesive, comprehensive
+				well-designed web map of the world. Based on the responses to
+				<a href="https://twitter.com/samanbb" target="_blank">Saman Bemel Benrud's</a>
+				question from the other day, some cartographic heavyweights like
+				<a href="https://twitter.com/jonahadkins" target="_blank">Jonah Adkins</a>
+				and <a href="https://twitter.com/vtcraghead" target="_blank">Bill Morris</a>
+				put the number at 1-4 work weeks.
+			</p>
+			<img src="img/saman-tweet.jpeg" alt="" class="shadow"/>
+			<div class="caption">
+				Tweet conversation in question.
+			</div>
+			<p>
+				Subsequent discussion in
+				<a href="http://thespatialcommunity.com" target="_blank">The Spatial Community</a>
+				Slack seemed to concur. Good cartography takes time!
+			</p>
+			<img src="img/slack-chat.png" alt="" class="shadow"/>
+			<div class="caption">
+				Reposted with permission.
+			</div>
+			<p>
+				It's a farily new thing for everyday cartographers to have the tools to
+				be able to easily design a global, zoomable map. This requires a new
+				set of skills:
+				<ul>
+					<li>Designing across zoom levels</li>
+					<li>Designing data you don't have complete control over</li>
+					<li>Designing across cultures</li>
+					<li>Designing for both <em>dense</em> and <em>sparse</em> areas</li>
+				</ul>
+			</p>
+			<p>
+				I started this post intending to write a comprehensive guide to
+				designing an awesome map with the new <span id="mapbox">Mapbox Studio</span>,
+				but now I'm really concerned that I've only given you sufficient
+				instruction for drawing some circles, and I'm leaving it up to you to
+				figure out how to draw the rest of the f$#%ing owl.
+			</p>
+			<div class="centered">
+				<img src="img/owl.jpg" alt="" class="shadow"/>
+			</div>
+			<p>
+				Maybe someday I'll record a screencast or make a video about designing
+				a global basemap. Would you watch something like that?
+			</p>
+			<p>
+				If you found this useful at all, I'd really appreicate hearing from you.
+				If there was something I could have done to make this better, I'd
+				<em>really</em> like to hear about it!
+			</p>
+			<p>
+				Seriously, I love getting your emails!
+			</p>
+
+<h4>For more reading</h4>
+<p>
+	<a href="https://www.mapbox.com/blog/tags/mapbox-studio/" target="_blank">
+	Check out the <span id="mapbox">Mapbox</span> blog.
+	</a>
+</p>
+</main>
+
+</div>
+<footer role="contentinfo">
+	<h3>Connect with TheMapSmith</h3>
+	<h3>
+	<ul class="list-inline social-buttons">
+		<li><a href="http://www.mapsmith.net"><i class="fa fa-globe"></i></a></li>
+			<li><a href="mailto:stephen@mapsmith.net"><i class="fa fa-envelope"></i></a></li>
+			<li><a href="http://www.twitter.com/TheMapSmith"><i class="fa fa-twitter"></i></a></li>
+			<li><a href="http://github.com/themapsmith"><i class="fa fa-github"></i></a></li>
+			<li><a href="https://www.facebook.com/TheMapSmith"><i class="fa fa-facebook"></i></a></li>
+			<li><a href="http://www.linkedin.com/in/stephenrogersmith"><i class="fa fa-linkedin"></i></a></li>
+	</ul>
+	</h3>
+</footer>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-45708379-5', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</body>

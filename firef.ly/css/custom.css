@@ -1,0 +1,94 @@
+@font-face {
+  font-family: 'Public Gothic';
+  src: url('Public Gothic Square.otf');
+}
+
+@font-face {
+  font-family: 'Roemisch';
+  src: url('RoemischStehend.ttf');
+}
+
+@font-face {
+  font-family: 'Roemisch Light';
+  src: url('RoemischStehendHar.ttf');
+}
+
+@font-face {
+  font-family: 'Roemisch Italic';
+  src: url('RoemischLiegend.ttf');
+}
+
+@font-face {
+  font-family: 'Roemisch Italic Light';
+  src: url('RoemischLiegendHar.ttf');
+}
+
+@font-face {
+  font-family: 'Roemisch Reverse Oblique';
+  src: url('RoemischRueckLiegend.ttf');
+}
+
+@font-face {
+  font-family: 'Roemisch Reverse Oblique Light';
+  src: url('RoemischRueckLiegHar.ttf');
+}
+
+@font-face {
+  font-family: 'Replica Bold';
+  src: url('ReplicaBold.otf');
+}
+
+
+.title {
+  margin-top: 25%;
+}
+
+.row-head {
+  margin-top: 5%;
+}
+
+.hex {
+  padding-bottom: 10px;
+  padding-top: 5px;
+}
+
+.info p {
+  margin-top: 35px
+}
+
+.row {
+  padding-bottom: 25px;
+  border-bottom: 1px #333 solid;
+}
+
+.public-gothic {
+  font-family: 'Public Gothic';
+}
+
+.roe {
+  font-family: 'Roemisch';
+}
+
+.roe-lite {
+  font-family: 'Roemisch Light';
+}
+
+.roe-ita {
+  font-family: 'Roemisch Italic';
+}
+
+.roe-ita-lite {
+  font-family: 'Roemisch Italic Light';
+}
+
+.roe-obl {
+  font-family: 'Roemisch Reverse Oblique';
+}
+
+.roe-obl-lite {
+  font-family: 'Roemisch Reverse Oblique Light';
+}
+
+.replica-bold {
+  font-family: 'Replica-Bold';
+}

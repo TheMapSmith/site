@@ -1,0 +1,330 @@
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Open Sans'), local('OpenSans'), url(../fonts/mbs/OpenSans-Regular.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Open Sans Bold'), local('OpenSans-Bold'), url(../fonts/mbs/OpenSans-Bold.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Open Sans';
+  font-style: italic;
+  font-weight: 400;
+  src: local('Open Sans Italic'), local('OpenSans-Italic'), url(../fonts/mbs/OpenSans-Italic.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Open Sans';
+  font-style: italic;
+  font-weight: 700;
+  src: local('Open Sans Bold Italic'), local('OpenSans-BoldItalic'), url(../fonts/mbs/OpenSans-BoldItalic.ttf) format('truetype');
+}
+
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: lighter;
+  color: #142736;
+  background-color: #f8f8f8;
+}
+
+
+img, object, video {
+	max-width: 100%;
+	height: auto;
+}
+
+iframe {
+	max-width: 100% !important;
+	width: 100% !important;
+}
+
+blockquote {
+	font-style: italic;
+	margin: 0 16px 16px;
+	margin: 0 1rem 1rem;
+}
+
+blockquote cite {
+	display: block;
+}
+
+blockquote cite:before {
+	content: "â€“";
+}
+
+/* Page Structure */
+
+/* Container */
+.container {
+	max-width: 720px;
+	max-width: 45rem;
+	margin: 0 auto;
+	padding: 0 16px;
+	padding: 0 1rem;
+}
+
+@font-face {
+  font-family:'Brandon';
+    src:url('../fonts/mbs/brandon_blk.eot');
+    src:url('../fonts/mbs/brandon_blk.eot#iefix') format('embedded-opentype'),
+        url('../fonts/mbs/brandon_blk.woff') format('woff');
+  }
+
+#mapbox {
+	overflow: hidden;
+  font-family:'Brandon', sans-serif;
+  text-transform: uppercase;
+}
+
+header {
+  top: 0;
+  background-attachment: scroll;
+  background-image: url(../mbs/img/manhattan-bg.jpg);
+  background-position: center center;
+  background-repeat: none;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+}
+
+footer[role=contentinfo] {
+  color: #f8f8f8;
+	padding: 2rem 0;
+	overflow: hidden;
+	text-align: center;
+  background-attachment: scroll;
+  background-image: url(../mbs/img/usaresources-banner-bw.jpg);
+  background-position: center center;
+  background-repeat: none;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+}
+
+.left {
+	float: left;
+	font-size: 15px;
+	font-size: 0.95rem;
+}
+
+footer[role=contentinfo] .left {
+	float: none;
+}
+
+@media all and (min-width: 500px) {
+	footer[role=contentinfo] .left {
+		float: left;
+	}
+}
+
+.right {
+	float: right;
+	font-size: 15px;
+	font-size: 0.95rem;
+}
+
+footer[role=contentinfo] .right {
+	float: none;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+footer[role=contentinfo] .right li {
+	display: inline-block;
+	padding: 0;
+}
+
+@media all and (min-width: 500px) {
+	footer[role=contentinfo] .right {
+		float: right;
+		margin: 15px 0 0 10px;
+	}
+}
+
+
+.shadow {
+  -webkit-box-shadow: 4px 4px 5px 0px rgba(50,50,50,0.25);
+  -moz-box-shadow: 4px 4px 5px 0px rgba(50,50,50,0.25);
+  box-shadow: 4px 4px 5px 0px rgba(50,50,50,0.25);
+}
+
+strong, em {
+  color: #495d77;
+}
+
+a {
+  color: #63b6e5;
+}
+
+/*blockquote courtesy Mapbox css*/
+
+blockquote {
+    color: rgba(0, 0, 0, .5);
+    padding: 0 0 0 30px;
+    background: transparent;
+    position: relative;
+
+}
+
+blockquote::before {
+    content: '\201C';
+    padding-top: 15px;
+    font-family: Georgia, serif;
+    font-size: 60px;
+    font-weight: bold;
+    color: rgba(0, 0, 0, .1);
+    position: absolute;
+    left: -20px;
+    top: 0px;
+    height: 35px;
+}
+
+blockquote::after {
+    content: '';
+    position: absolute;
+    width: 4px;
+    left: 0;
+    bottom: 0;
+    top: 35px;
+    background-color: rgba(0, 0, 0, .1);
+}
+
+img.small {
+  max-height: 100px;
+}
+
+.table { /*for styling Mapbox GL json*/
+  background: #eaeaea;
+}
+
+.centered {
+  text-align: center;
+}
+
+@font-face {
+  font-family:'Magda Clean Mono Offc Pro';
+    src:url('../fonts/mbs/MagdaCleanMonoOffcPro-Black.ttf') format('truetype');
+  }
+
+#magda {
+  font-family: 'Magda Clean Mono Offc Pro', serif;
+}
+
+
+/*@media only screen and (min-width : 480px) {*/
+  .navbar {
+    top: 0;
+    left: 0;
+    padding-left: 15px;
+    background-color: #f8f8f8;
+    position: fixed;
+    width: 100%;
+  }
+/*}*/
+
+/*@media only screen and (min-width : 768px) {
+  .navbar {
+    top: 0;
+    left: 1%;
+    background-color: #f8f8f8;
+    position: fixed;
+    width: 100%;
+  }
+}*/
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px) {
+  .navbar {
+    top: 0;
+    left: 1%;
+    position: fixed;
+    background-color: rgba(0,0,0,0);
+    width: 100%;
+  }
+}
+
+@font-face {
+  font-family: 'Kaushan Script';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Kaushan Script'), local('KaushanScript-Regular'), url(../fonts/mbs/KaushanScript-Regular.otf);
+}
+
+
+.navbar-brand {
+    font-family: "Kaushan Script","Helvetica Neue",Helvetica,Arial,cursive;
+    text-shadow: rgba(0, 0, 0, 0.83) 0px 2px 2px, 0px 0px 15px white, 0px 0px 5px white,0px 0px 2px white,0px 0px 25px white;
+    text-decoration: none;
+}
+
+.navbar > a {
+  color: #142736;
+}
+
+a.navbar-brand::hover {
+  color: blue;
+}
+
+.list-inline {
+  padding-left: 0;
+  margin-left: -5px;
+  list-style: none;
+}
+.list-inline > li {
+  display: inline-block;
+  padding-right: 5px;
+  padding-left: 5px;
+}
+
+.list-inline > li > a {
+  color: #f8f8f8;
+}
+
+.byline {
+  border-bottom: 1.5px solid #142736;
+}
+
+.align-left {
+  float: left;
+}
+
+.align-right {
+  float: right;
+}
+
+.clearfix:after {
+   content: " "; /* Older browser do not support empty content */
+   visibility: hidden;
+   display: block;
+   height: 0;
+   clear: both;
+}
+
+.headline {
+  margin-top: 0;
+  margin-bottom: 0;
+  color: #f8f8f8;
+  padding-top: 75px;
+  padding-bottom: 75px;
+  text-shadow: 1px 1px 1px black,2px 2px 5px black;
+}
+
+.caption {
+  text-align: center;
+  font-style: italic;
+  font-size: smaller;
+}
