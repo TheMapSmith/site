@@ -265,7 +265,7 @@ a .img-shadow:hover {
 
 @media only screen and (min-width: 480px) {
   .minor {
-    flex-basis: 256px;
+    max-width: 256px;
   }
 }
 
@@ -290,7 +290,7 @@ a .img-shadow:hover {
 
 @media only screen and (min-width: 768px) {
   .major {
-    flex-basis: 512px;
+    max-width: 512px;
   }
 }
 @media only screen and (min-width: 1125px) {
@@ -350,4 +350,38 @@ i {
 }
 .icon-trophy:before {
   content: "\e902";
+}
+
+
+
+/*vertical classes*/
+
+.flex-row {
+  display: flex;
+  justify-content: space-around;
+}
+
+.flex-vert {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.digital {
+  background-color: #ebfcf7;
+  order: 1;
+}
+
+.interactive {
+  background-color: #d7dafe;
+  order: 3;
+}
+
+.physical {
+  background-color: #f9fde9;
+  order: 2;
+}
+
+.col-title {
+  text-align: center;
 }
