@@ -28,7 +28,7 @@ h1, h2, h3, h4, h5 {
   text-transform: uppercase;
 }
 p {
-  text-transform: lowercase;
+  text-transform: none;
 }
 .container {
   max-width: 1750px;
@@ -359,29 +359,49 @@ i {
 .flex-row {
   display: flex;
   justify-content: space-around;
+  flex-wrap: wrap;
 }
 
 .flex-vert {
   display: flex;
-  flex-direction: column;
   align-items: center;
+  flex-direction: column;
+  flex-basis: 100%;
+  margin-bottom: 20px;
+  box-shadow: 0px 1px 2px rgba(30,30,30,.30);
 }
 
 .digital {
-  background-color: #ebfcf7;
+  background-color: #f0efe0;
   order: 1;
 }
 
 .interactive {
-  background-color: #d7dafe;
+  background-color: #ebe6e2;
   order: 3;
 }
 
 .physical {
-  background-color: #f9fde9;
+  background-color: #f4efdd;
   order: 2;
 }
 
 .col-title {
   text-align: center;
+  font-family: 'Fredoka One', cursive;
+  font-size: 2em;
+}
+
+.col-title p {
+  border-bottom: 5px solid #303545
+}
+
+@media (min-width: 1024px){
+  .flex-row {
+    flex-direction: row;
+    flex-wrap: nowrap;
+  }
+  .flex-vert {
+    box-shadow: none;
+  }
 }
