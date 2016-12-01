@@ -310,7 +310,7 @@
 								<p>
 									Expect a response within 7 days.
 								</p>
-								<a href="mailto:stephen.smith@vermont.gov" class="button style2">Email Me</a>
+								<a href="mailto:stephen@mapsmith.net" class="button style2">Email Me</a>
 							</div>
 						</div>
 					</div>
@@ -334,7 +334,7 @@
 								<p>
 									Expect a response within 5 days.
 								</p>
-								<a href="mailto:stephen.smith@vermont.gov" class="button style2">Email Me</a>
+								<a href="mailto:stephen@mapsmith.net" class="button style2">Email Me</a>
 							</div>
 						</div>
 					</div>
@@ -345,7 +345,7 @@
 								<h1>First, choose your option and pay below:</h1>
 
 								<section id="paypal" style="display:">
-									<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+									<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top" id="paypal-purchase">
 										<input type="hidden" name="cmd" value="_s-xclick">
 										<table><tr><td><input type="hidden" name="on0" value="Option">Option</td></tr>
 											<tr><td>
@@ -377,7 +377,7 @@
 								<p>
 									Expect a response within 72 hours.
 								</p>
-								<a href="mailto:stephen.smith@vermont.gov" class="button style2">Email Me</a>
+								<a href="mailto:stephen@mapsmith.net" class="button style2">Email Me</a>
 							</div>
 						</div>
 					</div>
@@ -407,16 +407,15 @@
 	<script src="assets/js/main.js"></script>
 
 	<script type="text/javascript">
-   $(function() {
-       $('#get-started').click(function() {
-           $('#paypal').show();
-           return false;
-       });
-   });
-
 	 $(function() {
        $('#faib').click(function() {
            $('#faib-details').show();
+					 ga('send', {
+						 hitType: 'event',
+						 eventCategory: 'Payment Button',
+						 eventAction: 'Click',
+						 eventLabel: 'Beer Button'
+					 });
            return false;
        });
    });
@@ -424,6 +423,12 @@
 	 $(function() {
        $('#ctt').click(function() {
            $('#ctt-details').show();
+					 ga('send', {
+						 hitType: 'event',
+						 eventCategory: 'Payment Button',
+						 eventAction: 'Click',
+						 eventLabel: 'CTT Button'
+					 });
            return false;
        });
    });
@@ -431,19 +436,39 @@
 	 $(function() {
        $('#paid').click(function() {
            $('#paid-details').show();
+					 ga('send', {
+					   hitType: 'event',
+					   eventCategory: 'Payment Button',
+					   eventAction: 'Click',
+					   eventLabel: 'PayPal Button'
+					 });
+           return false;
+       });
+   });
+
+	 $(function() {
+       $('#paypal-purchase').click(function() {
+					 ga('send', {
+					   hitType: 'event',
+					   eventCategory: 'Purchase Button',
+					   eventAction: 'Purchase',
+					   eventLabel: 'PayPal Button'
+					 });
            return false;
        });
    });
 </script>
 
 <script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+if (document.location.hostname.search("localhost") == -1) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
-  ga('create', 'UA-45708379-14', 'auto');
-  ga('send', 'pageview');
+	ga('create', 'UA-45708379-14', 'auto');
+	ga('send', 'pageview');
+}
 
 </script>
 
