@@ -418,7 +418,6 @@ if (document.location.hostname.search("localhost") == -1) {
 	ga('create', 'UA-45708379-14', 'auto');
 	ga('send', 'pageview');
 }
-
 </script>
 
 <script type="text/javascript">
@@ -460,7 +459,14 @@ $(function() {
 		return false;
 	});
 });
+</script>
 
+<script src="assets/js/jquery.scrolldepth.min.js"></script>
+
+<script>
+	jQuery(function() {
+	  jQuery.scrollDepth();
+	});
 </script>
 
 </body>
