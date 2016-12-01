@@ -406,59 +406,6 @@
 	<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
 	<script src="assets/js/main.js"></script>
 
-	<script type="text/javascript">
-	 $(function() {
-       $('#faib').click(function() {
-           $('#faib-details').show();
-					 ga('send', {
-						 hitType: 'event',
-						 eventCategory: 'Payment Button',
-						 eventAction: 'Click',
-						 eventLabel: 'Beer Button'
-					 });
-           return false;
-       });
-   });
-
-	 $(function() {
-       $('#ctt').click(function() {
-           $('#ctt-details').show();
-					 ga('send', {
-						 hitType: 'event',
-						 eventCategory: 'Payment Button',
-						 eventAction: 'Click',
-						 eventLabel: 'CTT Button'
-					 });
-           return false;
-       });
-   });
-
-	 $(function() {
-       $('#paid').click(function() {
-           $('#paid-details').show();
-					 ga('send', {
-					   hitType: 'event',
-					   eventCategory: 'Payment Button',
-					   eventAction: 'Click',
-					   eventLabel: 'PayPal Button'
-					 });
-           return false;
-       });
-   });
-
-	 $(function() {
-       $('#paypal-purchase').click(function() {
-					 ga('send', {
-					   hitType: 'event',
-					   eventCategory: 'Purchase Button',
-					   eventAction: 'Purchase',
-					   eventLabel: 'PayPal Button'
-					 });
-           return false;
-       });
-   });
-</script>
-
 <script>
 if (document.location.hostname.search("localhost") == -1) {
 	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -470,6 +417,59 @@ if (document.location.hostname.search("localhost") == -1) {
 	ga('send', 'pageview');
 }
 
+</script>
+
+<script type="text/javascript">
+$(function() {
+	$('#faib').click(function() {
+		$('#faib-details').show();
+		ga('send', {
+			hitType: 'event',
+			eventCategory: 'Payment Button',
+			eventAction: 'Click',
+			eventLabel: 'Beer Button'
+		});
+		return false;
+	});
+});
+
+$(function() {
+	$('#ctt').click(function() {
+		$('#ctt-details').show();
+		ga('send', {
+			hitType: 'event',
+			eventCategory: 'Payment Button',
+			eventAction: 'Click',
+			eventLabel: 'CTT Button'
+		});
+		return false;
+	});
+});
+
+$(function() {
+	$('#paid').click(function() {
+		$('#paid-details').show();
+		ga('send', {
+			hitType: 'event',
+			eventCategory: 'Payment Button',
+			eventAction: 'Click',
+			eventLabel: 'PayPal Button'
+		});
+		return false;
+	});
+});
+
+$(function() {
+	$('#paypal-purchase').click(function() {
+		ga('send', {
+			hitType: 'event',
+			eventCategory: 'Purchase Button',
+			eventAction: 'Purchase',
+			eventLabel: 'PayPal Button'
+		});
+		return false;
+	});
+});
 </script>
 
 </body>
